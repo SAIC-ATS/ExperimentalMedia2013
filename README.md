@@ -5,5 +5,5 @@ A repository for [Experimental](http://courses.christopherbaker.net/2013/Fall/Ex
 
 Previous iterations:
 
-[Fall, 2012](http://courses.christopherbaker.net/2012/Fall/ExperimentalMedia/)
-[Fall, 2013](http://courses.christopherbaker.net/2013/Fall/ExperimentalMedia/)
+- [Fall, 2012](http://courses.christopherbaker.net/2012/Fall/ExperimentalMedia/)
+- [Fall, 2013](http://courses.christopherbaker.net/2013/Fall/ExperimentalMedia/)

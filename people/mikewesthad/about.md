@@ -17,9 +17,18 @@ Supremely out-of-date websites:
 	* [mikewesthad](http://mikewesthad.wordpress.com/)
 
 Tools:
+[<p align="center">
+  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" alt="Unity3D Icon"/>
+</p>](http://unity3d.com/)
+
+[<p align="center">
+  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" width="100" height="100" alt="Unity3D Icon"/>
+</p>](http://unity3d.com/)
+
 <p align="center">
-  [<img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" alt="Unity3D Icon"/>](http://unity3d.com/)
+  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" width="100" height="100" alt="Unity3D Icon" href="http://unity3d.com/"/>
 </p>
+
 
 [![Unity3D](http://download.unity3d.com/webplayer/images/unity-icon-big.jpg)](http://unity3d.com/)
 [![openFrameworks](http://openframeworks.cc/images/ofw-logo.png)](http://www.openframeworks.cc/)

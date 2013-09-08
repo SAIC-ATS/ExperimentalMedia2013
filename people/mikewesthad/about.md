@@ -15,7 +15,7 @@ Likes:
 
 Supremely out-of-date websites:
 
-* [michaelwesthadley](michaelwesthadley.wordpress.com)
+* [michaelwesthadley](http://michaelwesthadley.wordpress.com)
 * [mikewesthad](http://mikewesthad.wordpress.com/)
 
 Tools:

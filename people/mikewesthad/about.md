@@ -3,36 +3,25 @@ Michael West Hadley
 Born April 22, 1988
 
 Lived in:
-	* Somerville, NJ
-	* Easton, PA
-	* Chicago, IL
+
+* Somerville, NJ
+* Easton, PA
+* Chicago, IL
 
 Likes:
-	* Avocados
-	* Sunshine
-	* Eternal Sunshine of the Spotless Mind
+
+* Avocados
+* Sunshine
 
 Supremely out-of-date websites:
-	* [michaelwesthadley](michaelwesthadley.wordpress.com)
-	* [mikewesthad](http://mikewesthad.wordpress.com/)
+
+* [michaelwesthadley](michaelwesthadley.wordpress.com)
+* [mikewesthad](http://mikewesthad.wordpress.com/)
 
 Tools:
-[<p align="center">
-  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" alt="Unity3D Icon"/>
-</p>](http://unity3d.com/)
 
-[<p align="center">
-  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" width="100" height="100" alt="Unity3D Icon"/>
-</p>](http://unity3d.com/)
-
-<p align="center">
-  <img src="http://download.unity3d.com/webplayer/images/unity-icon-big.jpg" width="100" height="100" alt="Unity3D Icon" href="http://unity3d.com/"/>
-</p>
-
-
-[![Unity3D](http://download.unity3d.com/webplayer/images/unity-icon-big.jpg)](http://unity3d.com/)
-[![openFrameworks](http://openframeworks.cc/images/ofw-logo.png)](http://www.openframeworks.cc/)
-[![Processing](
-http://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Processing_Logo_Clipped.svg/180px-Processing_Logo_Clipped.svg.png)](http://www.processing.org/)
-[![Blender](http://download.blender.org/institute/BlenderDesktopLogo.png)](http://www.blender.org/)
-[![Python](http://www.python.org/community/logos/python-logo.png)](http://www.python.org/)
+[![Unity3D](http://cs10867.vk.me/g38100438/a_4c8bfb91.jpg)](http://unity3d.com/)
+[![openFrameworks](https://1.gravatar.com/avatar/1061569f505705f6ba1f485673c5cc3b?d=https://identicons.github.com/a539871f08dd8f7c88f24bb7e1c1ed79.png&s=140)](http://www.openframeworks.cc/)
+[![Processing](http://diariowm.files.wordpress.com/2012/03/proces.jpg)](http://www.processing.org/)
+[![Blender](http://www.microsoft-office-2010.ru/uploads/posts/2012-11/1352026979_blender.jpg)](http://www.blender.org/)
+[![Python](http://www.rhino4you.com/1/images/140_0_2488426_52442.png)](http://www.python.org/)

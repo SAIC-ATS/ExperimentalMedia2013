@@ -1,3 +1,5 @@
+About
+-----
 Abraham Avnisan is a poet, artist, and programmer interested in examining the materiality of language through interactive experiences.
 
 Projects

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #	a simple bash script for text processing (I was doing this in MAX but this is much easier to deal with) 
 #	that takes a whole bunch of text, and saves each line as a separate text file, numbering each word form the original line
 #	and placing it on its own line in the new file.  This script requires  that there is a file called master.txt in the pwd

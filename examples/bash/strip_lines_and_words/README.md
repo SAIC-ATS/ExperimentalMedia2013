@@ -6,5 +6,5 @@ On the command line:
 
 If the command is not found, then make sure the file is executable by using the command:
 
-`chmod u+x strip_lines_and_words.sh``
+`chmod u+x strip_lines_and_words.sh`
 

@@ -14,5 +14,5 @@ Social
 
 * find me on [Facebook] (https://www.facebook.com/abraham.avnisan)
 * find me on [Google+] (https://plus.google.com/100878825292158943884)
-* follwo me on [Twitter] (http://twitter.com/AbrahamAvnisan)
+* follow me on [Twitter] (http://twitter.com/AbrahamAvnisan)
 

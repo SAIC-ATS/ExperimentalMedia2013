@@ -4,6 +4,6 @@ Bryn, here!
 
 I love dancing and throwing myself into new/unusual situations.
 
-Here's something [fun] (http://www.youtube.com/watch?v=IOQe9PDk8lg0 for ya.
+Here's something [fun] (http://www.youtube.com/watch?v=IOQe9PDk8lg0) for ya.
 
 

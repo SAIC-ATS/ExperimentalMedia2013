@@ -1,0 +1,1264 @@
+TopenFrameworks
+v5
+r1
+cCheck dependencies
+cCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+
+N/System/Library/Frameworks/AGL.framework/AGL
+c0000000050D323A5000000000001A480
+t1356014501
+s107648
+
+N/System/Library/Frameworks/Accelerate.framework/Accelerate
+c0000000050D3237200000000000065B0
+t1356014450
+s26032
+
+N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c0000000050D32354000000000000BAA0
+t1356014420
+s47776
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000519F44DB00000000003B2500
+t1369392347
+s3876096
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c0000000050D3235600000000000069F0
+t1356014422
+s27120
+
+N/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c00000000519F43C1000000000010BA40
+t1369392065
+s1096256
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c00000000519F442E0000000000656060
+t1369392174
+s6643808
+
+N/System/Library/Frameworks/CoreServices.framework/CoreServices
+c0000000050D3235A000000000000D4F0
+t1356014426
+s54512
+
+N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c00000000514A7F9C0000000000081CB0
+t1363836828
+s531632
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c0000000051D21B20000000000002DAD0
+t1372724000
+s187088
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c0000000051EF332C00000000004A2E10
+t1374630700
+s4861456
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c0000000051EF332B0000000000322E20
+t1374630699
+s3288608
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000005208E03A000000000000082C
+t1376313402
+s2092
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofAppEGLWindow.h
+c000000005208E03A0000000000001DA5
+t1376313402
+s7589
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofAppGLFWWindow.h
+c000000005208E03A0000000000000EA8
+t1376313402
+s3752
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofAppNoWindow.h
+c000000005208E03A0000000000001678
+t1376313402
+s5752
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofAppRunner.h
+c000000005208E03A0000000000000A14
+t1376313402
+s2580
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/app/ofBaseApp.h
+c000000005208E03A00000000000008BF
+t1376313402
+s2239
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../glut/lib/osx/GLUT.framework/GLUT
+c000000005208E03A0000000000093570
+t1376313402
+s603504
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dPrimitives.cpp
+c000000005208E03A00000000000094A3
+t1376313402
+s38051
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dUtils.cpp
+c000000005208E03A0000000000001056
+t1376313402
+s4182
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.cpp
+c000000005208E03A0000000000001AF7
+t1376313402
+s6903
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.cpp
+c000000005208E03A0000000000001DB1
+t1376313402
+s7601
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.cpp
+c000000005208E03A000000000001278D
+t1376313402
+s75661
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofNode.cpp
+c000000005208E03A000000000000276D
+t1376313402
+s10093
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGLFWWindow.cpp
+c000000005208E03A0000000000007ABE
+t1376313402
+s31422
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+c000000005208E03A000000000000575D
+t1376313402
+s22365
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppNoWindow.cpp
+c000000005208E03A0000000000000E8F
+t1376313402
+s3727
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+c000000005208E03A0000000000003F99
+t1376313402
+s16281
+i"ofAppRunner.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofSoundPlayer.h"
+i"ofSoundStream.h"
+i"ofImage.h"
+i"ofUtils.h"
+i"ofEvents.h"
+i"ofMath.h"
+i"ofGraphics.h"
+i"ofGLRenderer.h"
+i"ofGLProgrammableRenderer.h"
+i"ofTrueTypeFont.h"
+i"ofURLFileLoader.h"
+i"Poco/Net/SSLManager.h"
+i"ofQtUtils.h"
+i"ofAppNoWindow.h"
+i"ofAppiOSWindow.h"
+i"ofAppAndroidWindow.h"
+i"ofAppEGLWindow.h"
+i"ofAppGLFWWindow.h"
+i<signal.h>
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+c000000005208E03A0000000000005678
+t1376313402
+s22136
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+c000000005208E03A0000000000004B55
+t1376313402
+s19285
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.cpp
+c000000005208E03A00000000000028C4
+t1376313402
+s10436
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.h
+c000000005208E03A0000000000001DDF
+t1376313402
+s7647
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofFbo.cpp
+c000000005208E03A00000000000067E0
+t1376313402
+s26592
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.cpp
+c000000005208E03A000000000000CD06
+t1376313402
+s52486
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.h
+c000000005208E03A00000000000018BA
+t1376313402
+s6330
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLRenderer.cpp
+c000000005208E03A0000000000007C13
+t1376313402
+s31763
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLRenderer.h
+c000000005208E03A0000000000001451
+t1376313402
+s5201
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.cpp
+c000000005208E03A0000000000003484
+t1376313402
+s13444
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofLight.cpp
+c000000005208E03A0000000000003312
+t1376313402
+s13074
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofMaterial.cpp
+c000000005208E03A0000000000000C27
+t1376313402
+s3111
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofShader.cpp
+c000000005208E03A0000000000005F9D
+t1376313402
+s24477
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofTexture.cpp
+c000000005208E03A0000000000007E5D
+t1376313402
+s32349
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVbo.cpp
+c000000005208E03A00000000000069B2
+t1376313402
+s27058
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVboMesh.cpp
+c000000005208E03A0000000000001395
+t1376313402
+s5013
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/of3dGraphics.cpp
+c000000005208E03A0000000000004337
+t1376313402
+s17207
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+c000000005208E03A000000000000A8F4
+t1376313402
+s43252
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofCairoRenderer.cpp
+c000000005208E03A00000000000089A6
+t1376313402
+s35238
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+c000000005208E03A0000000000007FF4
+t1376313402
+s32756
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h
+c000000005208E03A00000000000027B4
+t1376313402
+s10164
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+c000000005208E03A000000000000910D
+t1376313402
+s37133
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h
+c000000005208E03A00000000000021C4
+t1376313402
+s8644
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPath.cpp
+c000000005208E03A00000000000059B6
+t1376313402
+s22966
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.cpp
+c000000005208E03A0000000000005C11
+t1376313402
+s23569
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPolyline.cpp
+c000000005208E03A0000000000007C9E
+t1376313402
+s31902
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofRendererCollection.cpp
+c000000005208E03A00000000000000B4
+t1376313402
+s180
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTessellator.cpp
+c000000005208E03A0000000000001772
+t1376313402
+s6002
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+c000000005208E03A000000000000899F
+t1376313402
+s35231
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h
+c000000005208E03A0000000000000C65
+t1376313402
+s3173
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.cpp
+c000000005208E03A0000000000002414
+t1376313402
+s9236
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.h
+c000000005208E03A00000000000015DE
+t1376313402
+s5598
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix3x3.cpp
+c000000005208E03A0000000000001824
+t1376313402
+s6180
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.cpp
+c000000005208E03A000000000000AC96
+t1376313402
+s44182
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofQuaternion.cpp
+c000000005208E03A00000000000024C4
+t1376313402
+s9412
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec2f.cpp
+c000000005208E03A00000000000000C7
+t1376313402
+s199
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec4f.cpp
+c000000005208E03A00000000000000E7
+t1376313402
+s231
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofFmodSoundPlayer.cpp
+c000000005208E03A00000000000027C4
+t1376313402
+s10180
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofOpenALSoundPlayer.cpp
+c000000005208E03A00000000000073E1
+t1376313402
+s29665
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofRtAudioSoundStream.cpp
+c000000005208E03A0000000000001E77
+t1376313402
+s7799
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+c000000005208E03A0000000000001382
+t1376313402
+s4994
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h
+c000000005208E03A000000000000075B
+t1376313402
+s1883
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+c000000005208E03A000000000000128B
+t1376313402
+s4747
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.h
+c000000005208E03A000000000000073B
+t1376313402
+s1851
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.cpp
+c000000005208E03A00000000000014AE
+t1376313402
+s5294
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofColor.cpp
+c000000005208E03A0000000000007F7D
+t1376313402
+s32637
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameter.cpp
+c000000005208E03A000000000000079C
+t1376313402
+s1948
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameterGroup.cpp
+c000000005208E03A0000000000001702
+t1376313402
+s5890
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.cpp
+c000000005208E03A0000000000005886
+t1376313402
+s22662
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofFileUtils.cpp
+c000000005208E03A000000000000AD7E
+t1376313402
+s44414
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.cpp
+c000000005208E03A0000000000002253
+t1376313402
+s8787
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMatrixStack.cpp
+c000000005208E03A00000000000023A8
+t1376313402
+s9128
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.cpp
+c000000005208E03A0000000000005E3F
+t1376313402
+s24127
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.cpp
+c000000005208E03A000000000000129E
+t1376313402
+s4766
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.cpp
+c000000005208E03A0000000000001CE4
+t1376313402
+s7396
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.h
+c000000005208E03A00000000000008E5
+t1376313402
+s2277
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+c000000005208E03A000000000000540F
+t1376313402
+s21519
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h
+c000000005208E03A00000000000017D0
+t1376313402
+s6096
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofXml.cpp
+c000000005208E03A0000000000006227
+t1376313402
+s25127
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitGrabber.mm
+c000000005208E03A000000000000766B
+t1376313402
+s30315
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitMovieRenderer.m
+c000000005208E03A000000000000545F
+t1376313402
+s21599
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitPlayer.mm
+c000000005208E03A0000000000003413
+t1376313402
+s13331
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+c000000005208E03A0000000000002598
+t1376313402
+s9624
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.h
+c000000005208E03A00000000000006EC
+t1376313402
+s1772
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimeGrabber.cpp
+c000000005208E03A000000000000617D
+t1376313402
+s24957
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimePlayer.cpp
+c000000005208E03A0000000000005F64
+t1376313402
+s24420
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+c000000005208E03A0000000000001B08
+t1376313402
+s6920
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+c000000005208E03A0000000000002B23
+t1376313402
+s11043
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dGraphics.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dPrimitives.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppGLFWWindow.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppNoWindow.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofBaseTypes.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofCairoRenderer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofCamera.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofColor.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofEasyCam.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofEvents.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFbo.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFileUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFmodSoundPlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLProgrammableRenderer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLRenderer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofImage.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofLight.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofLog.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMaterial.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMath.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrix3x3.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrix4x4.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrixStack.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMesh.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofNode.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofOpenALSoundPlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofParameter.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofParameterGroup.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPath.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPixels.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPolyline.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitGrabber.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitMovieRenderer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitPlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuaternion.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuickTimeGrabber.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuickTimePlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRectangle.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRendererCollection.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRtAudioSoundStream.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofShader.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSystemUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTessellator.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTexture.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofThread.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofURLFileLoader.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofUtils.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVbo.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVboMesh.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVec2f.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVec4f.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofXml.o
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList
+c00000000522FCE5D0000000000002A17
+t1378864733
+s10775
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/openFrameworksDebug.a
+t2
+s0
+
+N/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/poco/include/Poco/Net/SSLManager.h
+c000000005208E03E000000000000473F
+t1376313406
+s18239
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dPrimitives.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofNode.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGLFWWindow.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppNoWindow.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofFbo.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLRenderer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofLight.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofMaterial.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofShader.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofTexture.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVbo.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVboMesh.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/of3dGraphics.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofCairoRenderer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPath.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPolyline.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofRendererCollection.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTessellator.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix3x3.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofQuaternion.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec2f.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec4f.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofFmodSoundPlayer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofOpenALSoundPlayer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofRtAudioSoundStream.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofColor.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameter.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameterGroup.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofFileUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMatrixStack.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofXml.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitGrabber.mm
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitMovieRenderer.m
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitPlayer.mm
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimeGrabber.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimePlayer.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+r0
+
+CBuild AST from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc026c3dd05e0b741^e736f1dd05e0b741^-327"warning: The specified SDK “Current OS X” does not appear to have all of the necessary headers installed.  Update your project to use a built-in SDK (“Latest OS X” is recommended) or install the system headers (included with the “Command Line Tools” package) from the “Downloads” pane in the Xcode preferences.1(21%IDEActivityLogMessage2@326"Warning: The specified SDK “Current OS X” does not appear to have all of the necessary headers installed.  Update your project to use a built-in SDK (“Latest OS X” is recommended) or install the system headers (included with the “Command Line Tools” package) from the “Downloads” pane in the Xcode preferences.-400557533#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#0#--18"Check dependencies36"AE61374F-6E26-4CD5-8456-FBFFFCC3D7C7-
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dGraphics.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/of3dGraphics.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dPrimitives.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dPrimitives.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/of3dUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/of3dUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppGLFWWindow.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGLFWWindow.cpp normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppNoWindow.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppNoWindow.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s400557533.952640
+e400557534.992943
+r0
+xCompileC
+x../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+x/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: -lpthread: 'linker' input unused
+oIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp:1:
+oIn file included from ../../../../libs/openFrameworks/app/ofAppRunner.h:3:
+o/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found
+o        #include <TargetConditionals.h>
+o                 ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Compile /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp2e1cf4dd05e0b741^7634fede05e0b741^-537"clang: warning: -lpthread: 'linker' input unusedIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp:1:In file included from ../../../../libs/openFrameworks/app/ofAppRunner.h:3:/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found        #include <TargetConditionals.h>                 ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp0000000000000000^3372"CompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o ../../../openFrameworks/app/ofAppRunner.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++98 -stdlib=libstdc++ -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Wno-invalid-offsetof -g -mssse3 -Wno-sign-conversion -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/openFrameworksDebug.hmap -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/include -I../../../../libs/openFrameworks -I../../../../libs/openFrameworks/3d -I../../../../libs/openFrameworks/app -I../../../../libs/openFrameworks/communication -I../../../../libs/openFrameworks/events -I../../../../libs/openFrameworks/gl -I../../../../libs/openFrameworks/graphics -I../../../../libs/openFrameworks/math -I../../../../libs/openFrameworks/sound -I../../../../libs/openFrameworks/types -I../../../../libs/openFrameworks/utils -I../../../../libs/openFrameworks/video -I../../../../libs/poco/include -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/fmodex/include -I../../../../libs/glew/include -I../../../../libs/FreeImage/include -I../../../../libs/tess2/include -I../../../../libs/cairo/include/cairo -I../../../../libs/rtAudio/include -I../../../../libs/glfw/include -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources/i386 -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources -F/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx -F/System/Library/Frameworks -D__MACOSX_CORE__ -lpthread -MMD -MT dependencies -MF /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.d --serialize-diagnostics /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.dia -c /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp -o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o36"736C4BEC-19B1-4C03-987B-308D4EE0C544-
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s400557533.952633
+e400557534.589474
+r0
+xCompileC
+x../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+x/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: -lpthread: 'linker' input unused
+oIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp:42:
+o../../../../libs/openFrameworks/communication/ofArduino.h:27:10: fatal error: 'list' file not found
+o#include <list>
+o         ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Compile /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp221bf4dd05e0b741^74ea96de05e0b741^-355"clang: warning: -lpthread: 'linker' input unusedIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp:42:../../../../libs/openFrameworks/communication/ofArduino.h:27:10: fatal error: 'list' file not found#include <list>         ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp0000000000000000^3380"CompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o ../../../openFrameworks/communication/ofArduino.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++98 -stdlib=libstdc++ -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Wno-invalid-offsetof -g -mssse3 -Wno-sign-conversion -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/openFrameworksDebug.hmap -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/include -I../../../../libs/openFrameworks -I../../../../libs/openFrameworks/3d -I../../../../libs/openFrameworks/app -I../../../../libs/openFrameworks/communication -I../../../../libs/openFrameworks/events -I../../../../libs/openFrameworks/gl -I../../../../libs/openFrameworks/graphics -I../../../../libs/openFrameworks/math -I../../../../libs/openFrameworks/sound -I../../../../libs/openFrameworks/types -I../../../../libs/openFrameworks/utils -I../../../../libs/openFrameworks/video -I../../../../libs/poco/include -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/fmodex/include -I../../../../libs/glew/include -I../../../../libs/FreeImage/include -I../../../../libs/tess2/include -I../../../../libs/cairo/include/cairo -I../../../../libs/rtAudio/include -I../../../../libs/glfw/include -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources/i386 -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources -F/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx -F/System/Library/Frameworks -D__MACOSX_CORE__ -lpthread -MMD -MT dependencies -MF /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.d --serialize-diagnostics /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.dia -c /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp -o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofArduino.o36"4CD589E1-5C76-4C9C-8BE9-1DD2531B3570-
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofBaseTypes.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofBaseTypes.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofCairoRenderer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofCairoRenderer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofCamera.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofCamera.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofColor.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofColor.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofEasyCam.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofEasyCam.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofEvents.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFbo.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofFbo.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFileUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofFileUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofFmodSoundPlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofFmodSoundPlayer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLProgrammableRenderer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLProgrammableRenderer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLRenderer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLRenderer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGLUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofGLUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofImage.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofLight.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofLight.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofLog.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofLog.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMaterial.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofMaterial.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMath.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMath.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrix3x3.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix3x3.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrix4x4.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofMatrix4x4.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMatrixStack.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMatrixStack.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofMesh.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofMesh.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofNode.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/3d/ofNode.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofOpenALSoundPlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofOpenALSoundPlayer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofParameter.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameter.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofParameterGroup.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofParameterGroup.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPath.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPath.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPixels.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPixels.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofPolyline.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofPolyline.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitGrabber.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitGrabber.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitMovieRenderer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitMovieRenderer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQTKitPlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQTKitPlayer.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s400557533.952663
+e400557534.589466
+r0
+xCompileC
+x../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+x/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: -lpthread: 'linker' input unused
+oIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp:1:
+oIn file included from ../../../../libs/openFrameworks/video/ofQtUtils.h:3:
+o/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found
+o        #include <TargetConditionals.h>
+o                 ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Compile /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp3716f4dd05e0b741^d1e896de05e0b741^-537"clang: warning: -lpthread: 'linker' input unusedIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp:1:In file included from ../../../../libs/openFrameworks/video/ofQtUtils.h:3:/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found        #include <TargetConditionals.h>                 ^1 error generated.-0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp0000000000000000^3364"CompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o ../../../openFrameworks/video/ofQtUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++98 -stdlib=libstdc++ -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Wno-invalid-offsetof -g -mssse3 -Wno-sign-conversion -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/openFrameworksDebug.hmap -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/include -I../../../../libs/openFrameworks -I../../../../libs/openFrameworks/3d -I../../../../libs/openFrameworks/app -I../../../../libs/openFrameworks/communication -I../../../../libs/openFrameworks/events -I../../../../libs/openFrameworks/gl -I../../../../libs/openFrameworks/graphics -I../../../../libs/openFrameworks/math -I../../../../libs/openFrameworks/sound -I../../../../libs/openFrameworks/types -I../../../../libs/openFrameworks/utils -I../../../../libs/openFrameworks/video -I../../../../libs/poco/include -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/fmodex/include -I../../../../libs/glew/include -I../../../../libs/FreeImage/include -I../../../../libs/tess2/include -I../../../../libs/cairo/include/cairo -I../../../../libs/rtAudio/include -I../../../../libs/glfw/include -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources/i386 -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources -F/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx -F/System/Library/Frameworks -D__MACOSX_CORE__ -lpthread -MMD -MT dependencies -MF /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.d --serialize-diagnostics /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.dia -c /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp -o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o36"AC22BAFE-5840-4806-BD81-7B3ECA96C715-
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuaternion.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofQuaternion.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuickTimeGrabber.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimeGrabber.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofQuickTimePlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQuickTimePlayer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRectangle.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/types/ofRectangle.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRendererCollection.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofRendererCollection.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofRtAudioSoundStream.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofRtAudioSoundStream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s400557533.952648
+e400557534.488311
+r0
+xCompileC
+x../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+x/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: -lpthread: 'linker' input unused
+oIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp:1:
+oIn file included from ../../../../libs/openFrameworks/communication/ofSerial.h:3:
+o/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found
+o        #include <TargetConditionals.h>
+o                 ^
+o1 error generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection140"Compile /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp5517f4dd05e0b741^6cea7cde05e0b741^-551"clang: warning: -lpthread: 'linker' input unusedIn file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp:1:In file included from ../../../../libs/openFrameworks/communication/ofSerial.h:3:/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h:61:11: fatal error: 'TargetConditionals.h' file not found        #include <TargetConditionals.h>                 ^1 error generated.1(36%IDEClangDiagnosticActivityLogMessage2@37"'TargetConditionals.h' file not found-400557534#18446744073709551615#0#2(2@157"In file included from /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp:1:-400557534#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@104"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/communication/ofSerial.cpp0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@81"In file included from ../../../../libs/openFrameworks/communication/ofSerial.h:3:-400557534#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@102"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/communication/ofSerial.h0000000000000000^2#9#2#9#23#0#21"Clang LLVM 1.0 Notice--2#27"com.apple.dt.IDE.diagnostic3@97"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworks/utils/ofConstants.h0000000000000000^60#10#60#10#1664#0#29"Lexical or Preprocessor Issue--0#0#0#-19%DVTDocumentLocation4@148"file://localhost/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp0000000000000000^3374"CompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o ../../../openFrameworks/communication/ofSerial.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++98 -stdlib=libstdc++ -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wno-unused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Wno-invalid-offsetof -g -mssse3 -Wno-sign-conversion -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/openFrameworksDebug.hmap -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/include -I../../../../libs/openFrameworks -I../../../../libs/openFrameworks/3d -I../../../../libs/openFrameworks/app -I../../../../libs/openFrameworks/communication -I../../../../libs/openFrameworks/events -I../../../../libs/openFrameworks/gl -I../../../../libs/openFrameworks/graphics -I../../../../libs/openFrameworks/math -I../../../../libs/openFrameworks/sound -I../../../../libs/openFrameworks/types -I../../../../libs/openFrameworks/utils -I../../../../libs/openFrameworks/video -I../../../../libs/poco/include -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/fmodex/include -I../../../../libs/glew/include -I../../../../libs/FreeImage/include -I../../../../libs/tess2/include -I../../../../libs/cairo/include/cairo -I../../../../libs/rtAudio/include -I../../../../libs/glfw/include -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources/i386 -I/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/DerivedSources -F/Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx -F/System/Library/Frameworks -D__MACOSX_CORE__ -lpthread -MMD -MT dependencies -MF /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.d --serialize-diagnostics /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.dia -c /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp -o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSerial.o36"4438A1D0-384D-4D6F-90C5-59B7FB0A055B-
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofShader.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofShader.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofSystemUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofSystemUtils.cpp normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTessellator.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTessellator.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTexture.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofTexture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofThread.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofThread.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofURLFileLoader.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofURLFileLoader.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofUtils.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVbo.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVbo.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVboMesh.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/gl/ofVboMesh.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVec2f.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec2f.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVec4f.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/math/ofVec4f.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC ../../lib/osx/build/debug/openFrameworks.build/Objects-normal/i386/ofXml.o /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofXml.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CLibtool /Users/Noah/Desktop/of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/../../lib/osx/openFrameworksDebug.a normal i386
+r0
+

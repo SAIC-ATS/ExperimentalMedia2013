@@ -1,0 +1,759 @@
+
+#include "ofConstants.h"
+#include "ofSystemUtils.h"
+#include "ofFileUtils.h"
+#include "ofLog.h"
+#include "ofUtils.h"
+#include "ofAppRunner.h"
+
+#ifdef TARGET_WIN32
+#include <winuser.h>
+#include <commdlg.h>
+#define _WIN32_DCOM
+
+#include <windows.h>
+#include <shlobj.h>
+#include <tchar.h>
+#include <stdio.h>
+
+#endif
+
+#ifdef TARGET_OSX
+	// ofSystemUtils.cpp is configured to build as
+	// objective-c++ so as able to use Cocoa dialog panels
+	// This is done with this compiler flag
+	//		-x objective-c++
+	// http://www.yakyak.org/viewtopic.php?p=1475838&sid=1e9dcb5c9fd652a6695ac00c5e957822#p1475838
+
+	#include <Cocoa/Cocoa.h>
+#endif
+
+#ifdef TARGET_WIN32
+#include <locale>
+#include <sstream>
+#include <string>
+
+std::string convertWideToNarrow( const wchar_t *s, char dfault = '?',
+                      const std::locale& loc = std::locale() )
+{
+  std::ostringstream stm;
+
+  while( *s != L'\0' ) {
+    stm << std::use_facet< std::ctype<wchar_t> >( loc ).narrow( *s++, dfault );
+  }
+  return stm.str();
+}
+
+std::wstring convertNarrowToWide( const std::string& as ){
+    // deal with trivial case of empty string
+    if( as.empty() )    return std::wstring();
+
+    // determine required length of new string
+    size_t reqLength = ::MultiByteToWideChar( CP_UTF8, 0, as.c_str(), (int)as.length(), 0, 0 );
+
+    // construct new string of required length
+    std::wstring ret( reqLength, L'\0' );
+
+    // convert old string to new string
+    ::MultiByteToWideChar( CP_UTF8, 0, as.c_str(), (int)as.length(), &ret[0], (int)ret.length() );
+
+    // return new string ( compiler should optimize this away )
+    return ret;
+}
+
+#endif
+
+#if defined( TARGET_OSX )
+static void restoreAppWindowFocus(){
+	NSWindow * appWindow = (NSWindow *)ofGetCocoaWindow();
+	if(appWindow) {
+		[appWindow makeKeyAndOrderFront:nil];
+	}
+}
+#endif
+
+#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+#include <gtk/gtk.h>
+static gboolean closeGTK(GtkWidget *widget){
+	//gtk_widget_destroy(widget);
+    gtk_main_quit();
+    return (FALSE);
+}
+
+static void initGTK(){
+	int argc=0; char **argv = NULL;
+	gtk_init (&argc, &argv);
+
+}
+static void startGTK(GtkWidget *dialog){
+	gtk_init_add( (GSourceFunc) closeGTK, NULL );
+	gtk_quit_add_destroy(1,GTK_OBJECT(dialog));
+	//g_timeout_add(10, (GSourceFunc) destroyWidgetGTK, (gpointer) dialog);
+	gtk_main();
+}
+
+static string gtkFileDialog(GtkFileChooserAction action,string windowTitle,string defaultName=""){
+	initGTK();
+	string results;
+
+	const gchar* button_name = "";
+	switch(action){
+	case GTK_FILE_CHOOSER_ACTION_OPEN:
+		button_name = GTK_STOCK_OPEN;
+		break;
+	case GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER:
+		button_name = GTK_STOCK_SELECT_ALL;
+		break;
+	case GTK_FILE_CHOOSER_ACTION_SAVE:
+		button_name = GTK_STOCK_SAVE;
+		break;
+	default:
+		return "";
+		break;
+	}
+
+	GtkWidget *dialog = gtk_file_chooser_dialog_new (windowTitle.c_str(),
+						  NULL,
+						  action,
+						  button_name, GTK_RESPONSE_ACCEPT,
+						  GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+						  NULL);
+
+	gtk_file_chooser_set_filename(GTK_FILE_CHOOSER(dialog),defaultName.c_str());
+
+	if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_ACCEPT) {
+		results = gtk_file_chooser_get_filename (GTK_FILE_CHOOSER (dialog));
+	}
+	startGTK(dialog);
+	return results;
+}
+
+#endif
+#ifdef TARGET_ANDROID
+#include "ofxAndroidUtils.h"
+#endif
+
+//------------------------------------------------------------------------------
+ofFileDialogResult::ofFileDialogResult(){
+	filePath = "";
+	fileName = "";
+	bSuccess = false;
+}
+
+//------------------------------------------------------------------------------
+string ofFileDialogResult::getName(){
+	return fileName;
+}
+
+//------------------------------------------------------------------------------
+string ofFileDialogResult::getPath(){
+	return filePath;
+}
+
+
+//------------------------------------------------------------------------------
+void ofSystemAlertDialog(string errorMessage){
+
+
+	#ifdef TARGET_WIN32
+		// we need to convert error message to a wide char message.
+		// first, figure out the length and allocate a wchar_t at that length + 1 (the +1 is for a terminating character)
+		int length = strlen(errorMessage.c_str());
+		wchar_t * widearray = new wchar_t[length+1];
+		memset(widearray, 0, sizeof(wchar_t)*(length+1));
+		// then, call mbstowcs:
+		// http://www.cplusplus.com/reference/clibrary/cstdlib/mbstowcs/
+		mbstowcs(widearray, errorMessage.c_str(), length);
+		// launch the alert:
+		MessageBoxW(NULL, widearray, L"alert", MB_OK);
+		// clear the allocated memory:
+		delete widearray;
+	#endif
+
+
+	#ifdef TARGET_OSX
+		NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+		NSAlert *alertDialog = [NSAlert alertWithMessageText:[NSString stringWithUTF8String:errorMessage.c_str()]
+											   defaultButton:nil
+											 alternateButton:nil
+												 otherButton:nil
+								   informativeTextWithFormat:@""];
+		[alertDialog runModal];
+		restoreAppWindowFocus();
+		[pool drain];
+	#endif
+
+	#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+		initGTK();
+		GtkWidget* dialog = gtk_message_dialog_new (NULL, (GtkDialogFlags) 0, GTK_MESSAGE_INFO, GTK_BUTTONS_OK, "%s", errorMessage.c_str());
+		gtk_dialog_run (GTK_DIALOG (dialog));
+		startGTK(dialog);
+	#endif
+
+	#ifdef TARGET_ANDROID
+		ofxAndroidAlertBox(errorMessage);
+	#endif
+}
+
+//----------------------------------------------------------------------------------------
+#ifdef TARGET_WIN32
+//---------------------------------------------------------------------
+static int CALLBACK loadDialogBrowseCallback(
+  HWND hwnd,
+  UINT uMsg,
+  LPARAM lParam,
+  LPARAM lpData
+){
+    string defaultPath = *(string*)lpData;
+    if(defaultPath!="" && uMsg==BFFM_INITIALIZED){
+        SendMessage(hwnd,BFFM_SETSELECTION,1,(LPARAM)ofToDataPath(defaultPath).c_str());
+    }
+
+	return 0;
+}
+//----------------------------------------------------------------------------------------
+#endif
+//---------------------------------------------------------------------
+
+// OS specific results here.  "" = cancel or something bad like can't load, can't save, etc...
+ofFileDialogResult ofSystemLoadDialog(string windowTitle, bool bFolderSelection, string defaultPath){
+
+	ofFileDialogResult results;
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------       OSX
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_OSX
+	
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	NSOpenPanel * loadDialog = [NSOpenPanel openPanel];
+	[loadDialog setAllowsMultipleSelection:NO];
+	[loadDialog setCanChooseDirectories:bFolderSelection];
+	[loadDialog setResolvesAliases:YES];
+	
+	if(!windowTitle.empty()) {
+		[loadDialog setTitle:[NSString stringWithUTF8String:windowTitle.c_str()]];
+	}
+	
+	if(!defaultPath.empty()) {
+		NSString * s = [NSString stringWithUTF8String:defaultPath.c_str()];
+		s = [[s stringByExpandingTildeInPath] stringByResolvingSymlinksInPath];
+		NSURL * defaultPathUrl = [NSURL fileURLWithPath:s];
+		[loadDialog setDirectoryURL:defaultPathUrl];
+	}
+	
+	NSInteger buttonClicked = [loadDialog runModal];
+	restoreAppWindowFocus();
+	
+	if(buttonClicked == NSFileHandlingPanelOKButton) {
+		NSURL * selectedFileURL = [[loadDialog URLs] objectAtIndex:0];
+		results.filePath = string([[selectedFileURL path] UTF8String]);
+	}
+	[pool drain];
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   windoze
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_WIN32
+
+	if (bFolderSelection == false){
+
+        OPENFILENAME ofn;
+
+		ZeroMemory(&ofn, sizeof(ofn));
+		ofn.lStructSize = sizeof(ofn);
+		HWND hwnd = WindowFromDC(wglGetCurrentDC());
+		ofn.hwndOwner = hwnd;
+#ifdef __MINGW32_VERSION
+		char szFileName[MAX_PATH];
+        memset(szFileName,0,260);
+		if(defaultPath!=""){
+            strcpy(szFileName,ofToDataPath(defaultPath).c_str());
+		}
+
+		ofn.lpstrFilter = "All\0";
+		ofn.lpstrFile = szFileName;
+#else // Visual Studio
+		wchar_t szFileName[MAX_PATH];
+		if(defaultPath!=""){
+            wcscpy(szFileName,convertNarrowToWide(ofToDataPath(defaultPath)).c_str());
+		}else{
+		    //szFileName = L"";
+			memset(&szFileName,  0, sizeof(szFileName));
+		}
+		ofn.lpstrFilter = L"All\0";
+		ofn.lpstrFile = szFileName;
+#endif
+		ofn.nMaxFile = MAX_PATH;
+		ofn.Flags = OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
+		ofn.lpstrDefExt = 0;
+
+		if(GetOpenFileName(&ofn)) {
+#ifdef __MINGW32_VERSION
+			results.filePath = string(szFileName);
+#else
+			results.filePath = convertWideToNarrow(szFileName);
+#endif
+
+		}
+
+	} else {
+
+		BROWSEINFOW      bi;
+		wchar_t         wideCharacterBuffer[MAX_PATH];
+		LPITEMIDLIST    pidl;
+		LPMALLOC		lpMalloc;
+
+		// Get a pointer to the shell memory allocator
+		if(SHGetMalloc(&lpMalloc) != S_OK){
+			//TODO: deal with some sort of error here?
+		}
+		bi.hwndOwner        =   NULL;
+		bi.pidlRoot         =   NULL;
+		bi.pszDisplayName   =   wideCharacterBuffer;
+		bi.lpszTitle        =   L"Select Directory";
+		bi.ulFlags          =   BIF_RETURNFSANCESTORS | BIF_RETURNONLYFSDIRS;
+		bi.lpfn             =   &loadDialogBrowseCallback;
+		bi.lParam           =   (LPARAM) &defaultPath;
+
+		if(pidl = SHBrowseForFolderW(&bi)){
+			// Copy the path directory to the buffer
+			if(SHGetPathFromIDListW(pidl,wideCharacterBuffer)){
+				results.filePath = convertWideToNarrow(wideCharacterBuffer);
+			}
+			lpMalloc->Free(pidl);
+		}
+		lpMalloc->Release();
+	}
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   windoze
+	//----------------------------------------------------------------------------------------
+#endif
+
+
+
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   linux
+	//----------------------------------------------------------------------------------------
+#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+		if(bFolderSelection) results.filePath = gtkFileDialog(GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,windowTitle,defaultPath);
+		else results.filePath = gtkFileDialog(GTK_FILE_CHOOSER_ACTION_OPEN,windowTitle,defaultPath);
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+
+
+	if( results.filePath.length() > 0 ){
+		results.bSuccess = true;
+		results.fileName = ofFilePath::getFileName(results.filePath);
+	}
+
+	return results;
+}
+
+
+
+ofFileDialogResult ofSystemSaveDialog(string defaultName, string messageName){
+
+	ofFileDialogResult results;
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------       OSX
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_OSX
+
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	NSSavePanel * saveDialog = [NSSavePanel savePanel];
+	[saveDialog setMessage:[NSString stringWithUTF8String:messageName.c_str()]];
+	[saveDialog setNameFieldStringValue:[NSString stringWithUTF8String:defaultName.c_str()]];
+	
+	NSInteger buttonClicked = [saveDialog runModal];
+	restoreAppWindowFocus();
+	
+	if(buttonClicked == NSFileHandlingPanelOKButton){
+		results.filePath = string([[[saveDialog URL] path] UTF8String]);
+	}
+	[pool drain];
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   windoze
+	//----------------------------------------------------------------------------------------
+#ifdef TARGET_WIN32
+
+
+	wchar_t fileName[MAX_PATH] = L"";
+	char * extension;
+	OPENFILENAMEW ofn;
+    memset(&ofn, 0, sizeof(OPENFILENAME));
+	ofn.lStructSize = sizeof(OPENFILENAME);
+	HWND hwnd = WindowFromDC(wglGetCurrentDC());
+	ofn.hwndOwner = hwnd;
+	ofn.hInstance = GetModuleHandle(0);
+	ofn.nMaxFileTitle = 31;
+	ofn.lpstrFile = fileName;
+	ofn.nMaxFile = MAX_PATH;
+	ofn.lpstrFilter = L"All Files (*.*)\0*.*\0";
+	ofn.lpstrDefExt = L"";	// we could do .rxml here?
+	ofn.Flags = OFN_EXPLORER | OFN_PATHMUSTEXIST | OFN_OVERWRITEPROMPT | OFN_HIDEREADONLY;
+	ofn.lpstrTitle = L"Select Output File";
+
+	if (GetSaveFileNameW(&ofn)){
+		results.filePath = convertWideToNarrow(fileName);
+	}
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+
+	//----------------------------------------------------------------------------------------
+	//------------------------------------------------------------------------------   linux
+	//----------------------------------------------------------------------------------------
+#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+
+	results.filePath = gtkFileDialog(GTK_FILE_CHOOSER_ACTION_SAVE, messageName,defaultName);
+
+#endif
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------
+
+	if( results.filePath.length() > 0 ){
+		results.bSuccess = true;
+		results.fileName = ofFilePath::getFileName(results.filePath);
+	}
+
+	return results;
+}
+
+#ifdef TARGET_WIN32
+LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    switch(msg)
+    {
+        /*case WM_CLOSE:
+            DestroyWindow(hwnd);
+        break;
+        case WM_DESTROY:
+            PostQuitMessage(0);
+        break;*/
+        default:
+            return DefWindowProc(hwnd, msg, wParam, lParam);
+    }
+    return 0;
+}
+#endif
+
+
+string ofSystemTextBoxDialog(string question, string text){
+#if defined( TARGET_LINUX ) && defined (OF_USING_GTK)
+	initGTK();
+	GtkWidget* dialog = gtk_message_dialog_new (NULL, (GtkDialogFlags) 0, GTK_MESSAGE_QUESTION, (GtkButtonsType) GTK_BUTTONS_OK_CANCEL, "%s", question.c_str() );
+	GtkWidget* content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+	GtkWidget* textbox = gtk_entry_new();
+	gtk_entry_set_text(GTK_ENTRY(textbox),text.c_str());
+	gtk_container_add (GTK_CONTAINER (content_area), textbox);
+	gtk_widget_show_all (dialog);
+	if(gtk_dialog_run (GTK_DIALOG (dialog))==GTK_RESPONSE_OK){
+		text = gtk_entry_get_text(GTK_ENTRY(textbox));
+	}
+	startGTK(dialog);
+#endif
+
+#ifdef TARGET_OSX
+	// create alert dialog
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	[alert addButtonWithTitle:@"OK"];
+	[alert addButtonWithTitle:@"Cancel"];
+	[alert setMessageText:[NSString stringWithCString:question.c_str()
+											 encoding:NSUTF8StringEncoding]];
+	// create text field
+	NSTextField* label = [[NSTextField alloc] initWithFrame:NSRectFromCGRect(CGRectMake(0,0,300,40))];
+	[label setStringValue:[NSString stringWithCString:text.c_str()
+											 encoding:NSUTF8StringEncoding]];
+	// add text field to alert dialog
+	[alert setAccessoryView:label];
+	NSInteger returnCode = [alert runModal];
+	// if OK was clicked, assign value to text
+	if ( returnCode == NSAlertFirstButtonReturn )
+		text = [[label stringValue] UTF8String];
+#endif
+
+#ifdef TARGET_WIN32
+    // we need to convert error message to a wide char message.
+    // first, figure out the length and allocate a wchar_t at that length + 1 (the +1 is for a terminating character)
+
+	WNDCLASSEX wc;
+	MSG Msg;
+
+	//we have to do this because mingw wants non wide strings and vs wants wide strings
+    #ifdef _MSC_VER
+
+        #define TMP_STR_CONVERT LPCWSTR
+
+		const LPCWSTR g_szClassName = L"myWindowClass\0";
+
+		//Step 1: Registering the Window Class
+		wc.cbSize        = sizeof(WNDCLASSEX);
+		wc.style         = CS_HREDRAW | CS_VREDRAW;
+		wc.lpfnWndProc   = WndProc;
+		wc.cbClsExtra    = 0;
+		wc.cbWndExtra    = 0;
+		wc.hInstance     = GetModuleHandle(0);
+		wc.lpszClassName = g_szClassName;
+		wc.hbrBackground = (HBRUSH)(COLOR_3DFACE + 1);
+		wc.lpszMenuName  = NULL;
+		wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
+		wc.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
+		wc.hIconSm       = LoadIcon(NULL, IDI_APPLICATION);
+		if(!RegisterClassEx(&wc)){
+			DWORD err=GetLastError();
+			if ((err==ERROR_CLASS_ALREADY_EXISTS)){
+                ; // we are ok
+                // http://stackoverflow.com/questions/5791996/re-registering-user-defined-window-class-c
+            } else {
+			MessageBox(NULL, L"Window Registration Failed!\0", L"Error!\0",
+				MB_ICONEXCLAMATION | MB_OK);
+			return text;
+		}
+		}
+
+		HWND dialog = CreateWindowEx(WS_EX_DLGMODALFRAME,
+			g_szClassName,
+			convertNarrowToWide(question).c_str(),
+			WS_POPUP | WS_CAPTION | DS_MODALFRAME | WS_SYSMENU,
+			CW_USEDEFAULT, CW_USEDEFAULT, 240, 140,
+			WindowFromDC(wglGetCurrentDC()), NULL, GetModuleHandle(0),NULL);
+
+		if(dialog == NULL)
+		{
+			
+			MessageBox(NULL,L"Window Creation Failed!\0", L"Error!\0",
+				MB_ICONEXCLAMATION | MB_OK);
+			return text;
+			
+		}
+
+		EnableWindow(WindowFromDC(wglGetCurrentDC()), FALSE);
+		HWND hEdit = CreateWindowEx(WS_EX_CLIENTEDGE, L"EDIT\0", convertNarrowToWide(text).c_str(),
+			WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+			10, 10, 210, 40, dialog, (HMENU)101, GetModuleHandle(NULL), NULL);
+
+
+		HWND okButton = CreateWindowEx(WS_EX_CLIENTEDGE, L"BUTTON\0", L"OK\0",
+			WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+			10, 60, 60, 30, dialog, (HMENU)IDOK, GetModuleHandle(NULL), NULL);
+
+		HWND cancelButton = CreateWindowEx(WS_EX_CLIENTEDGE, L"BUTTON\0", L"Cancel\0",
+			WS_CHILD | WS_VISIBLE,
+			80, 60, 60, 30, dialog, (HMENU)IDCANCEL, GetModuleHandle(NULL), NULL);
+
+		SetFocus( hEdit );
+
+		ShowWindow(dialog, SW_SHOWNORMAL);
+		bool bFirstEmpty = true;
+		while (true){
+			 if (!PeekMessageW( &Msg, 0, 0, 0, PM_REMOVE )){
+				 if (bFirstEmpty){
+					 // ShowWindow the first time the queue goes empty
+					 ShowWindow( dialog, SW_SHOWNORMAL );
+					 bFirstEmpty = FALSE;
+				 }
+				 if (!(GetWindowLongW( dialog, GWL_STYLE ) & DS_NOIDLEMSG)){
+					 // No message present -> send ENTERIDLE and wait
+					 SendMessageW( WindowFromDC(wglGetCurrentDC()), WM_ENTERIDLE, MSGF_DIALOGBOX, (LPARAM)dialog );
+				 }
+				 GetMessageW( &Msg, 0, 0, 0 );
+			 }
+
+			 if (Msg.message == WM_QUIT){
+				 PostQuitMessage( Msg.wParam );
+				 if (!IsWindow( dialog )){
+					EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+					return text;
+				 }
+				 break;
+			 }
+
+			 if (!IsWindow( dialog )){
+				EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				return text;
+			 }
+
+			 TranslateMessage( &Msg );
+			 DispatchMessageW( &Msg );
+
+			 if((Msg.hwnd == okButton && Msg.message==WM_LBUTTONUP) || (Msg.message==WM_KEYUP && Msg.wParam==13)){
+				 break;
+			 }else if((Msg.hwnd == cancelButton && Msg.message==WM_LBUTTONUP) ||  (Msg.message==WM_KEYUP && Msg.wParam==27)){
+				 EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				 DestroyWindow(dialog);
+				 return text;
+			 }
+
+			 if (!IsWindow( dialog )){
+				EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				return text;
+			 }
+
+			 if (bFirstEmpty && Msg.message == WM_TIMER){
+				 ShowWindow( dialog, SW_SHOWNORMAL );
+				 bFirstEmpty = FALSE;
+			 }
+		 }
+
+		 char buf[16384];
+		 GetDlgItemTextA( dialog, 101, buf, 16384 );
+		 text = buf;
+
+		 DestroyWindow(dialog);
+		 EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+
+	#else
+
+		const LPCSTR g_szClassName = "myWindowClass\0";
+
+		//Step 1: Registering the Window Class
+		wc.cbSize        = sizeof(WNDCLASSEX);
+		wc.style         = CS_HREDRAW | CS_VREDRAW;
+		wc.lpfnWndProc   = WndProc;
+		wc.cbClsExtra    = 0;
+		wc.cbWndExtra    = 0;
+		wc.hInstance     = GetModuleHandle(0);
+		wc.lpszClassName = g_szClassName;
+		wc.hbrBackground = (HBRUSH)(COLOR_3DFACE + 1);
+		wc.lpszMenuName  = NULL;
+		wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
+		wc.hIcon         = LoadIcon(NULL, IDI_APPLICATION);
+		wc.hIconSm       = LoadIcon(NULL, IDI_APPLICATION);
+		if(!RegisterClassEx(&wc))
+		{
+
+		    DWORD err=GetLastError();
+            if ((err==ERROR_CLASS_ALREADY_EXISTS)){
+                ; // we are ok
+                // http://stackoverflow.com/questions/5791996/re-registering-user-defined-window-class-c
+            } else {
+			MessageBox(NULL, "Window Registration Failed!\0", "Error!\0",
+				MB_ICONEXCLAMATION | MB_OK);
+			return text;
+		}
+
+
+		}
+
+		HWND dialog = CreateWindowEx(WS_EX_DLGMODALFRAME,
+			g_szClassName,
+			question.c_str(),
+			WS_POPUP | WS_CAPTION | DS_MODALFRAME | WS_SYSMENU,
+			CW_USEDEFAULT, CW_USEDEFAULT, 240, 140,
+			WindowFromDC(wglGetCurrentDC()), NULL, GetModuleHandle(0),NULL);
+
+		if(dialog == NULL)
+		{
+			MessageBox(NULL, "Window Creation Failed!\0", "Error!\0",
+				MB_ICONEXCLAMATION | MB_OK);
+			return text;
+		}
+
+		EnableWindow(WindowFromDC(wglGetCurrentDC()), FALSE);
+		HWND hEdit = CreateWindowEx(WS_EX_CLIENTEDGE, "EDIT\0", text.c_str(),
+			WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+			10, 10, 210, 40, dialog, (HMENU)101, GetModuleHandle(NULL), NULL);
+
+
+		HWND okButton = CreateWindowEx(WS_EX_CLIENTEDGE, "BUTTON\0", "OK\0",
+			WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+			10, 60, 60, 30, dialog, (HMENU)IDOK, GetModuleHandle(NULL), NULL);
+
+		HWND cancelButton = CreateWindowEx(WS_EX_CLIENTEDGE, "BUTTON\0", "Cancel\0",
+			WS_CHILD | WS_VISIBLE,
+			80, 60, 60, 30, dialog, (HMENU)IDCANCEL, GetModuleHandle(NULL), NULL);
+
+		SetFocus( hEdit );
+
+		ShowWindow(dialog, SW_SHOWNORMAL);
+		bool bFirstEmpty = true;
+		while (true){
+			 if (!PeekMessageW( &Msg, 0, 0, 0, PM_REMOVE )){
+				 if (bFirstEmpty){
+					 // ShowWindow the first time the queue goes empty
+					 ShowWindow( dialog, SW_SHOWNORMAL );
+					 bFirstEmpty = FALSE;
+				 }
+				 if (!(GetWindowLongW( dialog, GWL_STYLE ) & DS_NOIDLEMSG)){
+					 // No message present -> send ENTERIDLE and wait
+					 SendMessageW( WindowFromDC(wglGetCurrentDC()), WM_ENTERIDLE, MSGF_DIALOGBOX, (LPARAM)dialog );
+				 }
+				 GetMessageW( &Msg, 0, 0, 0 );
+			 }
+
+			 if (Msg.message == WM_QUIT){
+				 PostQuitMessage( Msg.wParam );
+				 if (!IsWindow( dialog )){
+					EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+					return text;
+				 }
+				 break;
+			 }
+
+			 if (!IsWindow( dialog )){
+				EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				return text;
+			 }
+
+			 TranslateMessage( &Msg );
+			 DispatchMessageW( &Msg );
+
+			 if((Msg.hwnd == okButton && Msg.message==WM_LBUTTONUP) || (Msg.message==WM_KEYUP && Msg.wParam==13)){
+				 break;
+			 }else if((Msg.hwnd == cancelButton && Msg.message==WM_LBUTTONUP) ||  (Msg.message==WM_KEYUP && Msg.wParam==27)){
+				 EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				 DestroyWindow(dialog);
+				 return text;
+			 }
+
+			 if (!IsWindow( dialog )){
+				EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+				return text;
+			 }
+
+			 if (bFirstEmpty && Msg.message == WM_TIMER){
+				 ShowWindow( dialog, SW_SHOWNORMAL );
+				 bFirstEmpty = FALSE;
+			 }
+		 }
+
+		 char buf[16384];
+		 GetDlgItemTextA( dialog, 101, buf, 16384 );
+		 text = buf;
+
+		 DestroyWindow(dialog);
+		 EnableWindow(WindowFromDC(wglGetCurrentDC()), TRUE);
+
+	#endif
+
+
+#endif
+
+#ifdef TARGET_ANDROID
+     ofxAndroidAlertTextBox(question,text);
+#endif
+
+	return text;
+}

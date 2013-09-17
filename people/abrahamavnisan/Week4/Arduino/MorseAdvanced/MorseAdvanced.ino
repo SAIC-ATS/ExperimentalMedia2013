@@ -17,9 +17,9 @@ int led = 13;
 // Set Phrase to 'translate'
 // only use all caps and no punctuation (because I'm lazy);
 char myPhrase[ ] = "WHAT HATH GOD WROUGHT";
-int loopA; // counters for the various loops
-int loopB;
-int loopC;
+//int loopA; // counters for the various loops
+//int loopB;
+//int loopC;
 int repeat_dot; // counters for dot and dash repetitions
 int repeat_dash;
 char x; // this stores the *next* character in the string, to determine how long of a gap
@@ -32,7 +32,7 @@ void setup() {
 
 void loop() {
     Serial.print("TOP OF LOOP \n");
-    loopA = 0;
+    int loopA = 0;
     while (loopA < sizeof(myPhrase)+1) {
       Serial.println("Loop number "); // All serial.print functions are for debugging in the serial monitor
       Serial.print(loopA);
@@ -47,7 +47,7 @@ void loop() {
 }
 
 void dot(int repeat_dot) {
-  for (loopB = 0; loopB < repeat_dot; loopB++) {
+  for (int loopB = 0; loopB < repeat_dot; loopB++) {
     Serial.println("dot");
     digitalWrite(led, HIGH);
     delay(dit);
@@ -57,7 +57,7 @@ void dot(int repeat_dot) {
 }
 
 void dash(int repeat_dash) {
-  for (loopC = 0; loopC < repeat_dash; loopC++) {
+  for (int loopC = 0; loopC < repeat_dash; loopC++) {
     Serial.println("dash");
     digitalWrite(led,HIGH);
     delay(dah);
@@ -69,7 +69,7 @@ void dash(int repeat_dash) {
 void gap(char x) {
        Serial.println("function gap called");
  if (x==' ') {
-     delay(time_unit*6); // six not seven because one time_unit delay is build into the dash and dot functions
+     delay(time_unit*6); // six not seven because one time_unit delay is built into the dash and dot functions
      Serial.println("delay seven");
      }
      else if (x=='\0') { // delay for end of phrase

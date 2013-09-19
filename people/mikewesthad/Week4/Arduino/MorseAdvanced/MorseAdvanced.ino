@@ -7,11 +7,11 @@
 
 
 // These units are in seconds
-#define DOT_LENGTH 0.25;
+#define DOT_LENGTH 0.5;
 float dotLength = DOT_LENGTH;      
 float dashLength = 3 * DOT_LENGTH;  
 
-String message = "Calibration Calibration This Better Get Picked Up By openFrameworks.  EOM";
+String message = "Calibration Calibration Cali Cali Cali Cali This Better Get Picked Up By openFrameworks.  EOM";
 
 int led = 13;
 

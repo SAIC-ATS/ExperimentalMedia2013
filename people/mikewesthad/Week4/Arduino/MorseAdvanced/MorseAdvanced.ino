@@ -5,9 +5,9 @@
 //  Space between letters is 3 dots
 //  Space between words is 7 dots 
 
-
+ 
 // These units are in seconds
-#define DOT_LENGTH 0.5;
+#define DOT_LENGTH 1.0;
 float dotLength = DOT_LENGTH;      
 float dashLength = 3 * DOT_LENGTH;  
 
@@ -25,7 +25,7 @@ void setup() {
     // Get the current character
     char c = message[i];
     
-    // Convert it to morse
+    // Convert it to morse 
     String morseString = internationalMorse(c);
     
     // Process the morse string to the LED

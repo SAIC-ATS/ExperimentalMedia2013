@@ -1,4 +1,5 @@
-// Explanation of International Morse Code from: http://en.wikipedia.org/wiki/Morse_code
+s
+ // Explanation of International Morse Code from: http://en.wikipedia.org/wiki/Morse_code
 //  Dot is basic unit of time
 //  Dash is three dits
 //  Space between dots and dashes within characters is one dot
@@ -7,11 +8,11 @@
 
  
 // These units are in seconds
-#define DOT_LENGTH 1.0;
+#define DOT_LENGTH 0.25;
 float dotLength = DOT_LENGTH;      
 float dashLength = 3 * DOT_LENGTH;  
 
-String message = "Calibration Calibration Cali Cali Cali Cali This Better Get Picked Up By openFrameworks.  EOM";
+String message = "Calibration Calibration This Better Get Picked Up By openFrameworks";
 
 int led = 13;
 
@@ -40,6 +41,9 @@ void setup() {
         processMorseToLED("   "); // Space between letters is equal to three dots
     }
   }
+  
+  // Turn off LED after end of message
+  digitalWrite(led, LOW);
 }
 
 void processMorseToLED(String morse) {

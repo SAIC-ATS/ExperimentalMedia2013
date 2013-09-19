@@ -10,8 +10,9 @@ class testApp : public ofBaseApp{
 		void draw();
 		float estimateLEDIntensity();
 		bool checkIfLEDIsOn(float intensity);
-		bool approxEqual(float a, float b, float acceptableRange);
 		string morseToEnglish(string m);
+		float roundDotTime(float t);
+		void drawEstimatedLED();
 
 		void keyPressed(int key);
 

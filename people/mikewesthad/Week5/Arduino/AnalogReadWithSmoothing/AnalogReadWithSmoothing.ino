@@ -5,6 +5,9 @@ const int BAUD_RATE = 9600;
 //  We want to hold on to the last NUM_SAMPLES values and perform
 //  an average on them to arrive at a 'current' value - this 
 //  is called a moving average: http://en.wikipedia.org/wiki/Moving_average
+//  NOTE: The larger NUM_SAMPLES, the smoother the values, but also
+//  the longer it will take the average to move in response to you turning the
+//  potentiometer
 const int NUM_SAMPLES = 10;
 int potSamples[NUM_SAMPLES];
 int potIndex = 0;

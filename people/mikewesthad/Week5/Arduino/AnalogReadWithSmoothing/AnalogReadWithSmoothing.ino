@@ -8,7 +8,7 @@ const int BAUD_RATE = 9600;
 //  NOTE: The larger NUM_SAMPLES, the smoother the values, but also
 //  the longer it will take the average to move in response to you turning the
 //  potentiometer
-const int NUM_SAMPLES = 10;
+const int NUM_SAMPLES = 20;
 int potSamples[NUM_SAMPLES];
 int potIndex = 0;
 int totalPotValue = 0;
@@ -19,7 +19,7 @@ int totalPotValue = 0;
 //  update the pot value sent out from the arduino if the pot value
 //  has changed by a specified amount
 int lastAveragePotValue = 0;
-int changeThreshold = 2;
+const int CHANGE_THRESHOLD = 3;
 
 void setup()
 {
@@ -52,7 +52,8 @@ void loop()
   
   // Detect whether the new average pot value has changed enough
   // from our last saved average pot value
-  if (abs(averagePotValue-lastAveragePotValue)>=changeThreshold){
+  int change = abs(averagePotValue-lastAveragePotValue);
+  if (change >= CHANGE_THRESHOLD){
     lastAveragePotValue = averagePotValue;
   }
   
@@ -61,6 +62,6 @@ void loop()
   Serial.println(lastAveragePotValue);
   
   // Delay
-  delay(50);
+  delay(10);
 }
 

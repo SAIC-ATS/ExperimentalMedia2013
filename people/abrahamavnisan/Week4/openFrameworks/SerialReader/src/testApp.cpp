@@ -91,7 +91,7 @@ void testApp::draw()
     ofBackground(backgroundColor);
     
     // we might also want to see the current value printed to the console
-    cout << potValue << endl;
+    cout << "potValue is " << potValue << endl;
     
     
 }

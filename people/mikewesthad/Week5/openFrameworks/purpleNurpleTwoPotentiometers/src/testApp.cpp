@@ -78,7 +78,7 @@ void testApp::setup(){
     leftPotValue = 0;
     rightPotValue = 0;
     serial.setup("COM5", BAUD_RATE);
-    isArduinoConnected = true;
+    isArduinoConnected = false;
 
     leftNipple.set(380.f, 490.f, 0.f);
     rightNipple.set(575.f, 510.f, 0.f);
@@ -154,8 +154,10 @@ void testApp::processSerial() {
         else if(myByte == '\n')             // Newline signals the end of a potentiometer value
         {
             vector<string> line = ofSplitString(buffer, ",");
-            leftPotValue = ofToInt(line[0]);
-            rightPotValue = ofToInt(line[1]);
+            if (line.size()==2) {
+                leftPotValue = ofToInt(line[0]);
+                rightPotValue = ofToInt(line[1]);
+            }
             buffer.clear();
         }
         else buffer += myByte;              // Append current char to our buffer
@@ -196,29 +198,6 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-//    mouseAngle = ofRadToDeg(atan2(y-leftNipple.y, x-leftNipple.x));
-//    if (mouseAngle < 0) mouseAngle += 360;
-//
-//    float clockwiseDistance;
-//    float counterClockwiseDistance;
-//    if (mouseAngle > lastMouseAngle) {
-//        clockwiseDistance = mouseAngle - lastMouseAngle;
-//        counterClockwiseDistance = lastMouseAngle + (360-mouseAngle);
-//    }
-//    else {
-//        clockwiseDistance = mouseAngle + (360-lastMouseAngle);
-//        counterClockwiseDistance = lastMouseAngle - mouseAngle;
-//    }
-//
-//    if (clockwiseDistance < counterClockwiseDistance) {
-//        leftRotation += 4*clockwiseDistance;
-//    }
-//    else {
-//        leftRotation += 4*-counterClockwiseDistance;
-//    }
-//
-//
-//    lastMouseAngle = mouseAngle;
 
 }
 

@@ -7,7 +7,7 @@ void ofApp::setup()
     // you must use your own port number here!
     // to find your port number on mac/linux/windows
     // % ls -la /dev/tty.*
-    serial.setup("/dev/tty.usbserial-A6006k9k",9600);
+    serial.setup("/dev/tty.usbmodem1421",9600);
 
     // initialize the potValue = 0
     potValue = 0;
@@ -33,11 +33,14 @@ void ofApp::update()
     {
         // Read a single byte
         char myByte = serial.readByte(); // a "char" is just like a byte
-
+        //cout << "myByte is " << myByte << endl;
+        
         // If our byte is an \r that means that we don't want to add it to
         // our buffer to later turn it into a number, but we instead want to
         // just want to ignore it.
-        if(myByte == '\r') {
+        
+        if(myByte == '\\r') {
+            //cout << "myByte == '\r'!" << endl;
             // nothing -- we are waiting for the \n
         }
         // if it is not \r then we check to see if it is an \n

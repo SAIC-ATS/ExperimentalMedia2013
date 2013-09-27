@@ -10,16 +10,16 @@ void setup()
 
 void loop()
 {
-  int potValue = analogRead(potPin);
+  //int potValue = analogRead(potPin);
   
-//  Serial.println(value);
+  Serial.println(value);
   
-//  value++;
+  value++;
   
-//  if(value > 255) value = 0;
+  if(value > 255) value = 0;
   
-  Serial.println(potValue);
+//  Serial.println(potValue);
   
-  delay(10);
+  delay(100);
 }
 

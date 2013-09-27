@@ -35,13 +35,19 @@ void testApp::draw(){
      */
     
     //#4-2
-   
+   /*
     for(int i =0; i < ofGetWidth(); i ++){
     int iC = (int)ofMap(i, 0, ofGetWidth(), 255, 0);
         ofSetColor(iC, iC, iC);
         ofLine(i,0,i,ofGetHeight());
     }
-   
+   */
     
-        
+    
+    //BONUS?
+    // mesh.clear();
+    //mesh.setMode(OF_PRIMITIVE_LINES);
+    ofBackgroundGradient(ofColor(255,255,255),ofColor(0,0,0));
+    // Here I draw my mesh.
+    //mesh.draw();
 }

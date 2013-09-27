@@ -9,4 +9,5 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 
+    ofVboMesh mesh;
 };

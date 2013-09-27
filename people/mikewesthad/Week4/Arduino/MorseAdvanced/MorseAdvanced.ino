@@ -1,5 +1,4 @@
-s
- // Explanation of International Morse Code from: http://en.wikipedia.org/wiki/Morse_code
+// Explanation of International Morse Code from: http://en.wikipedia.org/wiki/Morse_code
 //  Dot is basic unit of time
 //  Dash is three dits
 //  Space between dots and dashes within characters is one dot
@@ -12,7 +11,8 @@ s
 float dotLength = DOT_LENGTH;      
 float dashLength = 3 * DOT_LENGTH;  
 
-String message = "Calibration Calibration This Better Get Picked Up By openFrameworks";
+String message = "What Hath God Wrought What Hath God Wrought What Hath God Wrought";
+
 
 int led = 13;
 

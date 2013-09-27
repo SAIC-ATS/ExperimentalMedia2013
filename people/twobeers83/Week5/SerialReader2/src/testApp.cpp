@@ -3,12 +3,14 @@
 //--------------------------------------------------------------
 void testApp::setup(){
     
-    serial.setup("/dev/tty.usbmodem621", 9600); // address of arduino, baudrate has to be same as in Arduino
+    serial.setup("/dev/tty.usbmodem621", 9600);   
+    // address of arduino, baudrate has to be same as in Arduino
     
     potValue1 = 0;
     potValue2 = 0;
     
-    
+    ofBackground(255);
+    strokeColor.set(255,0,0);
     ofSetBackgroundAuto(false);
 }
 
@@ -27,8 +29,21 @@ void testApp::update(){
             
             vector<string> bufferVector = ofSplitString(buffer, ",");
             
-            potValue1 = ofToInt(bufferVector[0]);
-            potValue2 = ofToInt(bufferVector[1]);
+            
+            cout << "My un-split buffer is = " << buffer << endl;
+            cout << "The size of my split bufferVector = " << bufferVector.size() << " and I was expecting 2" << endl;
+            
+            if(bufferVector.size() < 2) {
+                cout << "The size of my buffer is less than 2!!!!" << endl;
+                cout << "If I do anything my program will crash!  So I'll just skip it." << endl;
+                
+            } else {
+                potValue1 = ofToInt(bufferVector[0]);
+                potValue2 = ofToInt(bufferVector[1]);
+            }
+            
+                        
+            
             buffer.clear();
         }
         else
@@ -45,22 +60,26 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 
+    int xAxis = ofMap(potValue1, 0, 680, 0, 1024);
+    int yAxis = ofMap(potValue2, 0, 1024, 0, 768);
+    
+    
+    strokeColor.setHue(strokeColor.getHue()+1);
+    if(strokeColor.getHue() > 254) strokeColor.setHue(0);
     
     ofFill();
-    ofSetColor(0, 255, 0);
-    ofCircle(mouseX, mouseY, 5);
-
-    cout << potValue1 << endl;
-    cout << potValue2 << endl;
-    
+    ofSetColor(strokeColor);
+    ofCircle(xAxis, yAxis, 5);
     
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
-
+    
+    if (key ==' ') {
+        ofBackground(255);
+    }
 }
-
 //--------------------------------------------------------------
 void testApp::keyReleased(int key){
 

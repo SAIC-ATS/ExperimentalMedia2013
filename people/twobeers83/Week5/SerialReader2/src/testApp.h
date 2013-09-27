@@ -26,5 +26,7 @@ class testApp : public ofBaseApp{
     
     std::string buffer;
     
+    ofColor strokeColor;
+    
 		
 };

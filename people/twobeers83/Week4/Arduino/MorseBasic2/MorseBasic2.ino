@@ -16,99 +16,108 @@ W · — —
   // Variables
 
   int ledPin = 13;
-  int timeUnit = 100;
+  int potPin = A0;
+  int potValue;
+  int timeUnit;
+  
+  char myPhrase[ ] = "WHAT HATH GOD WROUGHT";
+
 
   int dotDuration = timeUnit;
   int dashDuration = dotDuration*3;
   int letterSpaceDuration = dashDuration;
   int wordSpaceDuration = dashDuration*3;
-  
-  
- 
 
- 
   
-  // Methods
+  
+ 
+void update() {
+  int potValue = analogRead(potPin);
+  timeUnit = potValue;
+  Serial.println(potValue);
+}
+  
   void dot() {
     digitalWrite(ledPin, HIGH);
     delay(dotDuration);
     digitalWrite(ledPin, LOW);
     delay(dotDuration);
+    update(); 
   }
+  
   void dash() {
     digitalWrite(ledPin, HIGH);
     delay(dashDuration);
     digitalWrite(ledPin, LOW);
     delay(dotDuration);
+    update();
   }
+  
   void letterSpace() {
     delay(letterSpaceDuration);
+    update();
   }
+  
   void wordSpace() {
     delay(wordSpaceDuration);
+    update();
   }
   
-  
-// Letters
-void A() {
-  dot();
-  dash();
-  letterSpace();
-}
 
-void D() {
-  dash();
-  dot();
-  dot();
-  letterSpace();
-}
 
-void G() {
+void morse(char x) {
+  if (x=='A') {
+  dot();
+  dash();
+  letterSpace();
+  }
+  else if (x=='D') {
+  dash();
+  dot();
+  dot();
+  letterSpace();
+  }
+  else if (x=='G') {
   dash();
   dash();
   dot();
   letterSpace();
-}
-
-void H() {
+  }
+  else if (x=='H') {
   dot();
   dot();
   dot();
   dot();
   letterSpace();
-}
-
-void O() {
+  }
+  else if (x=='O') {
   dash();
   dash();
   dash();
   letterSpace();
-}
-
-void R() {
+  }
+  else if (x=='R') {
   dot();
   dash();
   dot();
   letterSpace();
-}
-
-void T() {
+  }
+  else if (x=='T') {
   dash();
   letterSpace();
-}
-
-void U() {
+  }
+  else if (x=='U') {
   dot();
   dot();
   dash();
   letterSpace();
-}
-
-void W() {
+  }
+  else if (x=='W') {
   dot();
   dash();
   dash();
   letterSpace();
+  }
 }
 
 
@@ -116,31 +125,16 @@ void W() {
 
 
 void setup() {
+  Serial.begin(9600);
   pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-W();
-H();
-A();
-T();
-wordSpace();
-H();
-A();
-T();
-H();
-wordSpace();
-G();
-O();
-D();
-wordSpace();
-W();
-R();
-O();
-U();
-G();
-H();
-T();
+  
+morse(myPhrase);
+
+int potValue = analogRead(potPin);
+Serial.println(potValue);
 
 wordSpace();
 wordSpace();

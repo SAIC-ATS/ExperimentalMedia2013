@@ -34,7 +34,7 @@ void loop()
       mouseDataIn = String("");
       counter = counter + 1;
     }
-    if(incomingStuff == '/n'){
+    if(incomingStuff == '\n'){
       unsigned int length = mouseDataIn.length();
       char storage[length];
       mouseDataIn.toCharArray(storage, length);
@@ -47,11 +47,12 @@ void loop()
     //    Serial.print("mouseX: ");
 
   }
-  Serial.println(val1);
+
+
   myServo0.write(val1);                  // sets the servo position  
   delay(15);                           
 
-
+  Serial.println(val1);
 
 
   //  val0 = analogRead(potPin0);            // reads the value of the potentiometer (value between 0 and 1023) 

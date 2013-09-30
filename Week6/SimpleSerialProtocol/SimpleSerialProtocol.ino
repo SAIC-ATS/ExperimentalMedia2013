@@ -96,7 +96,7 @@ void loop()
   // write our values to the output.
   for(int i = 0; i < NUM_LED_PINS; ++i)
   {
-     analogWrite(LED_PINS[i],1);//ledValues[i]); 
+     analogWrite(LED_PINS[i],ledValues[i]); 
   }
 }
 

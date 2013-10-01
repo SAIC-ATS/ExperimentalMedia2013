@@ -11,9 +11,6 @@ void ofApp::setup()
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
-
-
-
     ofBackground(0);
 
     // get the current time

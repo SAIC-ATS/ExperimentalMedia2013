@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F49C2C9-E8F5-499F-B0AF-33FAAF52E26D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParticlesWithClass</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4E67A353-D7BB-4AD6-9BE7-FE85D798578D</key>
+		<string>https://github.com/bakercp/ExperimentalMedia.git</string>
+		<key>C9FA920E-FB39-4FE0-AC32-CDDCA1BD0110</key>
+		<string>ssh://github.com/bakercp/openFrameworks.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ExperimentalMedia/Week6/ParticlesWithClass/ParticlesWithClass.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4E67A353-D7BB-4AD6-9BE7-FE85D798578D</key>
+		<string>../../../..</string>
+		<key>C9FA920E-FB39-4FE0-AC32-CDDCA1BD0110</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bakercp/ExperimentalMedia.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C9FA920E-FB39-4FE0-AC32-CDDCA1BD0110</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4E67A353-D7BB-4AD6-9BE7-FE85D798578D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ExperimentalMedia</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C9FA920E-FB39-4FE0-AC32-CDDCA1BD0110</string>
+			<key>IDESourceControlWCCName</key>
+			<string>openFrameworks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

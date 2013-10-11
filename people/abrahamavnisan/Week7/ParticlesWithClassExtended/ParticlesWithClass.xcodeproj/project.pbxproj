@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9002B81F1805A30600DA4F49 /* SphereBounds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9002B81D1805A30600DA4F49 /* SphereBounds.cpp */; };
+		9002B82218064E1600DA4F49 /* WordProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9002B82018064E1600DA4F49 /* WordProcess.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -62,6 +64,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9002B81D1805A30600DA4F49 /* SphereBounds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SphereBounds.cpp; sourceTree = "<group>"; };
+		9002B81E1805A30600DA4F49 /* SphereBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereBounds.h; sourceTree = "<group>"; };
+		9002B82018064E1600DA4F49 /* WordProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordProcess.cpp; sourceTree = "<group>"; };
+		9002B82118064E1600DA4F49 /* WordProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordProcess.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -193,7 +199,11 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				FDCD240A17FF1DB500379CE0 /* ofApp.cpp */,
 				FDCD240B17FF1DB500379CE0 /* ofApp.h */,
+				9002B82018064E1600DA4F49 /* WordProcess.cpp */,
+				9002B82118064E1600DA4F49 /* WordProcess.h */,
 				FDCD240D17FF1EDF00379CE0 /* BaseParticle.cpp */,
+				9002B81D1805A30600DA4F49 /* SphereBounds.cpp */,
+				9002B81E1805A30600DA4F49 /* SphereBounds.h */,
 				FDCD240E17FF1EDF00379CE0 /* BaseParticle.h */,
 				FDCD241E17FFBCF100379CE0 /* SpecialParticle.cpp */,
 				FDCD241F17FFBCF100379CE0 /* SpecialParticle.h */,
@@ -301,6 +311,8 @@
 				FDCD242017FFBCF100379CE0 /* SpecialParticle.cpp in Sources */,
 				FDCD240C17FF1DB500379CE0 /* ofApp.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				9002B81F1805A30600DA4F49 /* SphereBounds.cpp in Sources */,
+				9002B82218064E1600DA4F49 /* WordProcess.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,15 +4,27 @@
 //------------------------------------------------------------------------------
 void ofApp::setup()
 {
+    //ofToggleFullscreen();
     ofSetFrameRate(60);
+    ofBackground(0);
+    ofEnableAntiAliasing();
     ofEnableAlphaBlending();
+    velocityBounds = 5;
+    //maxNumberParticles = 10;
+    
+    myWP = new WordProcess("text.txt");
+    words = myWP->process();
+    addRandomParticle();
 
-    maxNumberParticles = 500;
+    
 }
 
 //------------------------------------------------------------------------------
 void ofApp::update()
 {
+ 
+    //s1->update();
+    
     // create a box that defines the screen (we'll use it to test if a particle
     // is still on the screen ...
     ofRectangle theScreen(0,0,ofGetWidth(),ofGetHeight());
@@ -33,21 +45,21 @@ void ofApp::update()
         }
     }
 
-    // here we add particles until the particles have reached our max number
-    // this allows us to make sure that we always have max number of particles
-    // on screen.
-    while(myParticles.size() < maxNumberParticles)
-    {
-        addRandomParticle();
-    }
-
 }
 
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
-    ofBackground(0);
+    // monitor our FPS & other handy debugging stuff
+//    ofDrawBitmapString("fps: "+ofToString(ofGetFrameRate()), 10, 10);
+//    ofDrawBitmapString("velocity.x "+ofToString(myParticles[0]->velocity.x), 10, 20);
+//    ofDrawBitmapString("velocity.y "+ofToString(myParticles[0]->velocity.y), 10, 30);
+//    ofDrawBitmapString("position.x "+ofToString(myParticles[0]->position.x), 10, 40);
+//    ofDrawBitmapString("position.y "+ofToString(myParticles[0]->position.y), 10, 50);
+    
+    //ofCircle(ofGetWidth()/2, ofGetHeight()/2, ofGetHeight()/2);
 
+ 
     // draw each particle according to its draw function
     for(int i = 0; i < myParticles.size(); ++i)
     {
@@ -86,6 +98,10 @@ void ofApp::draw()
 //------------------------------------------------------------------------------
 void ofApp::keyPressed(int key)
 {
+    if (key==' ')
+    {
+        reset();
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -130,39 +146,47 @@ void ofApp::dragEvent(ofDragInfo dragInfo)
 
 //------------------------------------------------------------------------------
 void ofApp::addRandomParticle()
+//{
+//    ofPtr<BaseParticle> p;
+//    for (int i=0; i<words.size(); i++)
+//    {
+//        p = ofPtr<BaseParticle>(new BaseParticle(words[i], velocityBounds));
+//        p->position = ofVec2f(ofGetWidth()/3, ofGetHeight()/3);
+//        p->velocity = ofVec2f(-.1,-.2);
+//        p->acceleration = ofVec2f(0,0); // I want 0-gravity, so set the acceleration to 0
+//        //p->maxAge = (int)ofRandom(10,100); // some particles will last longer than others.
+//        
+//        // we have an array of ofPtr (which holds a pointer to our base particle)
+//        myParticles.push_back(p); // add the particle to the system
+//    }
+//}
+//
+//
+// BELOW WORKS - ABOVE IS SANDBOX
+
 {
-
-    bool randomValue = (ofRandom(60) < 50); // random boolean value!
-                                            // or range is uniform betweeo
-                                            // 0-60.  so it is MORE likely that
-                                            // the value will be < 50
-                                            // so this will mostly be true
-                                            // and occasionally false.
-
     ofPtr<BaseParticle> p;
-
-    if(randomValue)
+    for (int i=0; i<words.size(); i++)
     {
-        p = ofPtr<BaseParticle>(new BaseParticle());
+        p = ofPtr<BaseParticle>(new BaseParticle(words[i], velocityBounds));
+        p->position = ofVec2f(ofGetWidth()/2 + ofRandom(-5,5), ofGetHeight()/3 + ofRandom(-5,5));
+        p->velocity = ofVec2f(ofRandom(-velocityBounds,velocityBounds), ofRandom(-velocityBounds,velocityBounds));
+        p->acceleration = ofVec2f(0,0); // I want 0-gravity, so set the acceleration to 0
+        //p->maxAge = (int)ofRandom(10,100); // some particles will last longer than others.
+        
+        // we have an array of ofPtr (which holds a pointer to our base particle)
+        myParticles.push_back(p); // add the particle to the system
     }
-    else
-    {
-        p = ofPtr<SpecialParticle>(new SpecialParticle());
-    }
-
-    // both kinds of particles have the same base parameters (inherited from
-    // the base particle system).
-    p->position = ofVec2f(ofGetWidth()/2 + ofRandom(-5,5), // random start x
-                         ofGetHeight()/3 + ofRandom(-5,5)); // random start y
-
-    p->velocity = ofVec2f(ofRandom(-.5,.5),
-                          ofRandom(-1)).getNormalized() * ofRandom(1,10);
-
-    p->acceleration.y = 0.2;  // we just set the acceleration of the particle
-
-    p->maxAge = (int)ofRandom(10,100); // some particles will last longer than others.
-
-    // we have an array of ofPtr (which holds a pointer to our base particle)
-    myParticles.push_back(p); // add the particle to the system
 }
+//------------------------------------------------------------------------------
+void ofApp::reset()
+{
+    for(int i = myParticles.size() - 1; i >= 0; --i)
+    {
+        myParticles.erase(myParticles.begin() + i);
+    }
+    addRandomParticle();
+}
+
+
 

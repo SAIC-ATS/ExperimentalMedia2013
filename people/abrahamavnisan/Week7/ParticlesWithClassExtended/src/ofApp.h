@@ -4,7 +4,7 @@
 #include "ofMain.h"
 #include "BaseParticle.h"
 #include "SpecialParticle.h"
-
+#include "WordProcess.h"
 
 class ofApp: public ofBaseApp
 {
@@ -24,11 +24,17 @@ public:
     void gotMessage(ofMessage msg);
 
     void addRandomParticle();
-
+    
+    void reset();
 
     int maxNumberParticles;
+    int velocityBounds;
 
     std::vector< ofPtr<BaseParticle> > myParticles;
 
     ofEasyCam cam;
+    
+    vector<string> words;
+    WordProcess *myWP;
+    
 };

@@ -14,12 +14,12 @@ public:
     void printVertices();
     void calculateVertices();
     void calculateEquilateralTrianglePoints();
+    ofVec3f calculateNormal(bool positive);
     void rotateHeadingTowardsTarget(ofVec3f target, float maxTurn, float t);
     void rotateUsingSmoothNoise(float t, float maxTurn);
 
     ofVec3f center;
 
-    ofVec3f unrotatedHeading;
     ofVec3f heading;
 
     ofVec3f top;

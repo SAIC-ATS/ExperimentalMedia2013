@@ -17,19 +17,32 @@ void ofApp::update()
 {
     float dt = ofGetLastFrameTime();
     if (recording) dt = 1.0f/recordFps;
-
-    particleEmitter->update(dt);
+    if (!isPausing && !isRotating) particleEmitter->update(dt);
 }
 
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
-
     ofBackground(0);
 
-    particleEmitter->draw();
+    ofPushMatrix();
+        ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+        if (isRotating) {
+            rotation += ofGetLastFrameTime() * rotationSpeed;
+            ofRotateX(rotation);
+            ofRotateY(rotation);
+        }
+        particleEmitter->draw();
+    ofPopMatrix();
 
-    if (!recording) ofDrawBitmapString(ofToString(ofGetFrameRate())+" fps",10,15);
+    if (!recording) {
+        ofSetColor(255);
+        ofDrawBitmapString(ofToString(ofGetFrameRate())+" fps",10,15);
+        ofDrawBitmapString("Hold p to freeze the particle system",10,30);
+        ofDrawBitmapString("Hold r to freeze+rotate the particle system",10,45);
+        ofDrawBitmapString("Hold the left mouse to have particles follow cursor",10,60);
+        ofDrawBitmapString("Hold the right mouse to have the particles follow the oldest particles",10,75);
+    }
 
     if (recording) {
         float elapsedTime = frame*1.0f/float(recordFps);
@@ -45,11 +58,18 @@ void ofApp::draw()
 //------------------------------------------------------------------------------
 void ofApp::keyPressed(int key)
 {
+    if (key == 'p') isPausing = true;
+    if (key == 'r') isRotating = true;
 }
 
 //------------------------------------------------------------------------------
 void ofApp::keyReleased(int key)
 {
+    if (key == 'p') isPausing = false;
+    if (key == 'r') {
+        isRotating = false;
+        rotation = 0.0f;
+    }
 }
 
 //------------------------------------------------------------------------------

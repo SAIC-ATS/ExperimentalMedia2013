@@ -2,14 +2,13 @@
 
 BaseParticle::BaseParticle():
     age(0), maxAge(10), radius(30), isDead(false) {
-
-    unrotatedHeading = ofVec3f(0,0,1);
+    center = ofVec3f(200,200,0);
+    calculateEquilateralTrianglePoints();
     heading = ofVec3f(ofRandom(-1,1),ofRandom(-1,1),ofRandom(-1,1));
     heading.normalize();
-    center = ofVec3f(200,200,0);
-    unrotatedHeading = ofVec3f(0,0,1);
-    calculateEquilateralTrianglePoints();
-    calculateVertices();
+    top.rotate(heading.x, heading.y, heading.z);
+    left.rotate(heading.x, heading.y, heading.z);
+    right.rotate(heading.x, heading.y, heading.z);
     velocity = 50.0f;
     noiseOffset = ofRandom(10000, 20000);
     noiseScale = 0.1;
@@ -18,33 +17,36 @@ BaseParticle::BaseParticle():
 
 BaseParticle::~BaseParticle() {}
 
-void BaseParticle::calculateVertices() {
-    // http://stackoverflow.com/questions/15101103/euler-angles-between-two-3d-vectors
-    ofVec3f axisOfRotation = heading.getCrossed(unrotatedHeading);
-    float rotationDegrees = ofRadToDeg(acos(heading.dot(unrotatedHeading)));
-    rotatedTop = top.getRotated(rotationDegrees, axisOfRotation);
-    rotatedLeft = left.getRotated(rotationDegrees, axisOfRotation);
-    rotatedRight = right.getRotated(rotationDegrees, axisOfRotation);
+ofVec3f BaseParticle::calculateNormal(bool positive) {
+    ofVec3f a = right - top;
+    ofVec3f b = left - top;
+    ofVec3f normal = a.cross(b).getNormalized();
+    if (positive) return normal;
+    else return -normal;
 }
 
 // Assumes heading and target are both unit vectors
 void BaseParticle::rotateHeadingTowardsTarget(ofVec3f target, float maxTurn, float t) {
+    ofVec3f heading = calculateNormal(true);
     ofVec3f headingToTarget = target - center;
     headingToTarget.normalize();
     ofVec3f axisOfRotation  = heading.getCrossed(headingToTarget);
     float rotationDegrees = ofRadToDeg(acos(heading.dot(headingToTarget)));
     rotationDegrees = min(rotationDegrees, maxTurn);
-    heading.rotate(rotationDegrees, axisOfRotation);
+    top.rotate(rotationDegrees, axisOfRotation);
+    left.rotate(rotationDegrees, axisOfRotation);
+    right.rotate(rotationDegrees, axisOfRotation);
 }
 
 void BaseParticle::rotateUsingSmoothNoise(float t, float maxTurn) {
-
     float i1 = ofNoise((t+noiseOffset)*noiseScale)*2.0-1.0;
     float i2 = ofNoise((t+2*noiseOffset)*noiseScale)*2.0-1.0;
     float i3 = ofNoise((t+3*noiseOffset)*noiseScale)*2.0-1.0;
     ofVec3f axisOfRotation = ofVec3f(i1, i2, i3);
     axisOfRotation.normalize();
-    heading.rotate(maxTurn, axisOfRotation);
+    top.rotate(maxTurn, axisOfRotation);
+    left.rotate(maxTurn, axisOfRotation);
+    right.rotate(maxTurn, axisOfRotation);
 }
 
 void BaseParticle::update(float dt, bool targetPresent, ofVec3f target) {
@@ -61,14 +63,8 @@ void BaseParticle::update(float dt, bool targetPresent, ofVec3f target) {
     }
     else rotateUsingSmoothNoise(age, maxTurn);
 
-    // We theoretically shouldn't need to normalize the heading since
-    // we are only ever rotating it (and it starts at unit length), but
-    // rounding errors will eventually accumulate, so let's be safe.
-    heading.normalize();
-
     // Move the particle
-    center += heading * distance;
-    calculateVertices();
+    center += calculateNormal(true) * distance;
 
     // Update the age
     age += dt;
@@ -79,10 +75,10 @@ void BaseParticle::update(float dt, bool targetPresent, ofVec3f target) {
 void BaseParticle::draw() {
     ofSetColor(ofMap(age,0,maxAge,255,25), 0, 0);
     ofFill();
-    ofTriangle(center+rotatedTop, center+rotatedLeft, center+rotatedRight);
+    ofTriangle(center+top, center+left, center+right);
 
     ofSetColor(ofMap(age,0,maxAge,255,25));
-    ofLine(center, center+20*heading);
+    ofLine(center, center+radius*calculateNormal(true));
 }
 
 void BaseParticle::calculateEquilateralTrianglePoints() {

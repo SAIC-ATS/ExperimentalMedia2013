@@ -31,4 +31,9 @@ public:
     float recordTime = 20;
     float recordFps = 30;
 
+    bool isPausing = false;
+    bool isRotating = false;
+    float rotation = 0.0f;
+    float rotationSpeed = 45;
+
 };

@@ -12,7 +12,7 @@ void ParticleEmitter::emitParticles(float dt) {
     int particlesGenerated = 0;
     while(particles.size()<maxNumberParticles && particlesGenerated<maxToEmit) {
         BaseParticle p;
-        p.center = ofVec3f(ofGetWidth()/2+ofRandom(-50,50), ofGetHeight()/2+ofRandom(-50,50), ofRandom(-50,50));
+        p.center = ofVec3f(ofRandom(-50,50), ofRandom(-50,50), ofRandom(-50,50));
         p.velocity = ofRandom(200,400);
         if (isFollowingParticles) particleTargets.push_back(ofRandom(numberParticleTargets));
         particles.push_back(p);
@@ -25,17 +25,17 @@ void ParticleEmitter::update(float dt) {
     for(int i=0; i<particles.size(); ++i) {
         bool targetPresent = isFollowingMouse || isFollowingParticles;
         ofVec3f target;
-        if (isFollowingMouse) target = ofVec3f(ofGetMouseX(), ofGetMouseY());
+        if (isFollowingMouse) target = ofVec3f(ofGetMouseX()-ofGetWidth()/2, ofGetMouseY()-ofGetHeight()/2);
         else if (isFollowingParticles) target = particles[particleTargets[i]].center;
         particles[i].update(dt, targetPresent, target);
     }
 
     // Kill particles when necessary
-    ofRectangle theScreen(0,0,ofGetWidth(),ofGetHeight());
+    ofRectangle theScreen(-ofGetWidth()/2,-ofGetHeight()/2,ofGetWidth()/2,ofGetHeight()/2);
     for(int i=particles.size()-1; i>=0; --i)
     {
         bool isDead = particles[i].isDead;
-        bool isOffScreen = !theScreen.inside(particles[i].center);
+        bool isOffScreen = false;//!theScreen.inside(particles[i].center);
         bool isNotInViewableDepth = !(particles[i].center.z < 400 && particles[i].center.z > -400);
         if(isDead || isOffScreen || isNotInViewableDepth) eraseParticle(i);
     }

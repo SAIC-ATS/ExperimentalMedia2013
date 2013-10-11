@@ -139,7 +139,7 @@ void ofApp::addRandomParticle()
                                             // so this will mostly be true
                                             // and occasionally false.
 
-    ofPtr<BaseParticle> p;
+    ofPtr<BaseParticle> p;  //smart pointer 
 
     if(randomValue)
     {

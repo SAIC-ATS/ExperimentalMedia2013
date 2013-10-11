@@ -9,6 +9,8 @@ class SpecialParticle: public BaseParticle // here we "inherit" from BaseParticl
 public:
     SpecialParticle();
     virtual ~SpecialParticle(); // the virtual keyword indicates that an inheritance relationship is present
+    
+//extend하고 있지않으니까 사실 virtual은 없어도 된다요 == might be extended //child class?
 
     // here we override the draw method in our sub class ... which means that this method
     // will be called rather than the base method ...

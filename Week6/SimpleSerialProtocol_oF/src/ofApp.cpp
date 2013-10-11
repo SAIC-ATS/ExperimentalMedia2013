@@ -3,7 +3,7 @@
 void ofApp::setup()
 {
     ofSetFrameRate(30);
-    serial.setup("/dev/tty.usbmodem1a1261",9600);
+    serial.setup("/dev/tty.usbmodemfa141",9600);
 }
 
 void ofApp::update()
@@ -26,6 +26,10 @@ void ofApp::update()
     // since we do not allow the range to go outside 0-254, we can send the 255
     // byte as a packet boundary marker to signal the end of our packet.
     serial.writeByte(255);
+    
+    
+    
+    
 
     // REMEMBER that this is sending bytes to the arduino quite quickly
     // 30 times / second (see ofSetFrameRate above).  Thus, on the Arduino
@@ -40,4 +44,8 @@ void ofApp::draw()
     ofBackground(0);
 
     ofDrawBitmapString("Not much to see here",ofPoint(20,20));
+    
+    
+    
+    
 }

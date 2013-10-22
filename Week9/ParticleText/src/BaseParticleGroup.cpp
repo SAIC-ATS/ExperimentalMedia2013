@@ -3,6 +3,7 @@
 
 BaseParticleGroup::BaseParticleGroup()
 {
+    color = ofColor(ofRandom(255),ofRandom(255),ofRandom(255));
 }
 
 BaseParticleGroup::~BaseParticleGroup()
@@ -29,7 +30,7 @@ void BaseParticleGroup::draw()
     // this is a "group" drawing feature
     ofPushStyle();
     ofNoFill();
-    ofSetColor(255,255,0,127);
+    ofSetColor(color);
     ofBeginShape();
     for(std::size_t i = 0; i < members.size(); ++i)
     {

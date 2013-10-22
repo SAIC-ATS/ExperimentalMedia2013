@@ -36,6 +36,11 @@ void ofApp::setup()
 //------------------------------------------------------------------------------
 void ofApp::update()
 {
+    if(ofGetFrameNum() % 10 == 0)
+    {
+        newParticle();
+    }
+
     // update the particle system
     particleSystem->update();
 }
@@ -50,8 +55,7 @@ void ofApp::draw()
     ofDrawBitmapStringHighlight("# Particles: " + ofToString(particleSystem->getNumParticles()), 15, 15);
 }
 
-//------------------------------------------------------------------------------
-void ofApp::keyPressed(int key)
+void ofApp::newParticle()
 {
     // move to the next particle (remember what modulo does?)
     currentWord = (currentWord + 1) % words.size();
@@ -74,6 +78,12 @@ void ofApp::keyPressed(int key)
 
     // add the particle the particle system
     particleSystem->addParticle(particle);
+}
+
+//------------------------------------------------------------------------------
+void ofApp::keyPressed(int key)
+{
+    newParticle();
 }
 
 //------------------------------------------------------------------------------

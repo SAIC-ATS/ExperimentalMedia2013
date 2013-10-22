@@ -5,6 +5,7 @@
 #include "ofGraphics.h"
 #include "of3dGraphics.h"
 
+
 class BaseParticle
 {
 public:
@@ -22,6 +23,8 @@ public:
 
     int age;
     int maxAge;
-    int isDead;
+    bool isDead;
+
+    int* myPointer;
 
 }; // don't forget the semi-colon after your class definition

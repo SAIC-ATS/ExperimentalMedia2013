@@ -21,9 +21,22 @@ void BaseTextParticle::draw()
     ofPushStyle();
 
     ofFill();
-    ofSetColor(255);
+    ofSetColor(255,190);
 
-    font.drawStringAsShapes(text,0,0);
+    std::string::iterator iter = text.begin();
+
+    std::size_t offset = 0;
+
+    while(iter != text.end())
+    {
+        std::string fragment(text.begin(), text.begin() + offset); // this will fail with some encodings
+        std::string character(text.begin()+offset,text.begin()+offset +1);
+        float xOffset = font.stringWidth(fragment); // hacky
+        font.drawString(character,xOffset,0); // draw as a texture!
+        ++iter;
+        ++offset;
+    }
+
 
     ofPopStyle();
 

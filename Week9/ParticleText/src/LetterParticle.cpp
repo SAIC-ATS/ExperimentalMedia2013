@@ -20,7 +20,7 @@ void LetterParticle::draw()
     ofNoFill();
     ofSetColor(255);
 
-    _font.drawStringAsShapes(_text,0,0);
+    font.drawStringAsShapes(text,0,0);
 
     ofPopStyle();
 
@@ -29,9 +29,9 @@ void LetterParticle::draw()
 
 void LetterParticle::kill()
 {
-    BaseParticle::kill();
+    BaseParticle::kill(); // call the super /parent class!
 
-    std::vector<ofTTFCharacter> paths = _font.getStringAsPoints(_text);
+    std::vector<ofTTFCharacter> paths = font.getStringAsPoints(text);
 
     std::vector<ofTTFCharacter>::iterator pathsIter = paths.begin();
 
@@ -56,13 +56,16 @@ void LetterParticle::kill()
 
                     ofVec2f centroid = poly.getCentroid2D();  // find the middle
 
-
+                    // create a particle group
                     std::shared_ptr<BaseParticleGroup> particleGroup(new BaseParticleGroup());
 
+                    // add particles to the particle system AND to the particle group
                     for(int i = 0; i < poly.size(); ++i)
                     {
                         std::shared_ptr<ParticleGroupMember> particle(new ParticleGroupMember());
 
+                        // this is how we get the particle to move away from the center
+                        // of the group (as calculated by the centroid)
                         ofVec2f newVelocity = (poly[i] - centroid).normalized() * ofRandom(.5,1);
 
                         particle->position = position + poly[i];
@@ -77,6 +80,7 @@ void LetterParticle::kill()
                         particleGroup->members.push_back(particle);
                     }
 
+                    // add the particle group to the particle system
                     particleSystem->addParticleGroup(particleGroup);
                 }
             }

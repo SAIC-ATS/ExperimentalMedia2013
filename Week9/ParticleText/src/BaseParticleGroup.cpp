@@ -11,6 +11,10 @@ BaseParticleGroup::~BaseParticleGroup()
 
 void BaseParticleGroup::update()
 {
+    // when a particle is dead, it is removed from the group
+    // it is likely that it has already been removed from the
+    // particle system as well.  when it is removed from both places,
+    // the shared pointer will call it's destructor and free the memory.
     for(int i = members.size() - 1; i >= 0; --i)
     {
         if(members[i]->isDead)
@@ -22,6 +26,7 @@ void BaseParticleGroup::update()
 
 void BaseParticleGroup::draw()
 {
+    // this is a "group" drawing feature
     ofPushStyle();
     ofNoFill();
     ofSetColor(255,255,0,127);

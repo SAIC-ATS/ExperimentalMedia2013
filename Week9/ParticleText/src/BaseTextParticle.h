@@ -6,6 +6,12 @@
 #include "BaseParticle.h"
 
 
+// this is our base text particle.
+// all other text-related particles will extend this class.
+// by creating a base class with both text and font, our sub classes
+// don't have to worry about keeping their own copy of the info.
+
+
 class BaseTextParticle: public BaseParticle
 {
 public:
@@ -14,13 +20,7 @@ public:
 
     virtual void draw();
 
-    std::string getText() const;
-    void setText(const std::string& text);
-
-    ofTrueTypeFont& getFontRef();
-
-protected:
-    std::string _text;
-    ofTrueTypeFont& _font;
+    std::string text;
+    ofTrueTypeFont& font;
 
 };

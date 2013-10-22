@@ -8,12 +8,12 @@
 #include "BaseParticleGroup.h"
 
 
+// here we extend the Abstract Particle System because
+// each particle needs an interface to this system.
+// 
 class ParticleSystem: public AbstractParticleSystem
 {
 public:
-    typedef std::shared_ptr<ParticleSystem> SharedPtr;
-    typedef std::weak_ptr<ParticleSystem> WeakPtr;
-
     ParticleSystem();
     virtual ~ParticleSystem();
 

@@ -1,9 +1,10 @@
 #include "BaseTextParticle.h"
 
 
-BaseTextParticle::BaseTextParticle(ofTrueTypeFont& font, const std::string& text):
-    _font(font),
-    _text(text)
+// we use initialization lists to set up our variables
+BaseTextParticle::BaseTextParticle(ofTrueTypeFont& _font, const std::string& _text):
+    font(_font),
+    text(_text)
 {
 }
 
@@ -11,6 +12,7 @@ BaseTextParticle::~BaseTextParticle()
 {
 }
 
+// this is our "Default" way of drawing.
 void BaseTextParticle::draw()
 {
     ofPushMatrix();
@@ -21,24 +23,9 @@ void BaseTextParticle::draw()
     ofFill();
     ofSetColor(255);
 
-    _font.drawStringAsShapes(_text,0,0);
+    font.drawStringAsShapes(text,0,0);
 
     ofPopStyle();
 
     ofPopMatrix();
-}
-
-std::string BaseTextParticle::getText() const
-{
-    return _text;
-}
-
-void BaseTextParticle::setText(const std::string& text)
-{
-    _text = text;
-}
-
-ofTrueTypeFont& BaseTextParticle::getFontRef()
-{
-    return _font;
 }

@@ -14,7 +14,11 @@ void WordParticle::kill()
 {
     BaseParticle::kill(); // call the superclass
 
-    std::vector<std::string> letters = TextUtilities::splitIntoLetters(_text);
+    // when the word particle is killed, then we will create a bunch of NEW particle
+    // which will represent a particle for each letter.
+    // when the LETTER is killed, we will turn that letter into a bunch of
+    // particles representing the outline for that letter.
+    std::vector<std::string> letters = TextUtilities::splitIntoLetters(text);
 
     std::vector<std::string>::iterator iter = letters.begin();
 
@@ -24,11 +28,11 @@ void WordParticle::kill()
     {
         std::string letter = *iter;
 
-        std::shared_ptr<BaseParticle> particle(new LetterParticle(_font,letter));
+        std::shared_ptr<BaseParticle> particle(new LetterParticle(font,letter));
 
-        std::string fragment(_text.begin(), _text.begin() + offset); // this will fail with some encodings
+        std::string fragment(text.begin(), text.begin() + offset); // this will fail with some encodings
 
-        float xOffset = _font.stringWidth(fragment);
+        float xOffset = font.stringWidth(fragment);
 
         particle->position = position;
         particle->position.x += xOffset;

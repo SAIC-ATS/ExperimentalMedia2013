@@ -54,6 +54,8 @@ void ParticleSystem::update()
         }
     }
 
+    // these are our render groups
+    // we have render groups so that we can treat particles as groups when drawing
     for(int i = _groups.size() - 1; i >= 0; --i)
     {
         _groups[i]->update(); // update the group

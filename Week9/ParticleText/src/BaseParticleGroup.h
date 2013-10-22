@@ -16,5 +16,6 @@ public:
     virtual void draw();
 
     std::vector<std::shared_ptr<ParticleGroupMember> > members;
-    
+
+    ofColor color;
 };

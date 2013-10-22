@@ -24,6 +24,8 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 
+    void newParticle();
+
     // we keep a shared pointer to our particle system
     std::shared_ptr<ParticleSystem> particleSystem;
 

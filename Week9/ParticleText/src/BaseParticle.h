@@ -4,6 +4,7 @@
 #include "ofVec3f.h"
 #include "ofGraphics.h"
 #include "of3dGraphics.h"
+#include "AbstractTypes.h"
 
 
 class BaseParticle
@@ -15,16 +16,23 @@ public:
     virtual void update();
     virtual void draw();
 
+    virtual void kill();
+
+    float getLife() const;
+
     ofVec2f position;
     ofVec2f lastPosition;
     
     ofVec2f velocity;
     ofVec2f acceleration;
 
+    float heading;
+    
     int age;
     int maxAge;
     bool isDead;
 
-    int* myPointer;
+    std::shared_ptr<AbstractParticleSystem> particleSystem;
 
-}; // don't forget the semi-colon after your class definition
+
+};

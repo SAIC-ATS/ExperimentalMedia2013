@@ -62,3 +62,9 @@ void BaseParticle::kill()
 {
     isDead = true;
 }
+
+float BaseParticle::getLife() const
+{
+    return ((float)age / (float)maxAge);
+}
+

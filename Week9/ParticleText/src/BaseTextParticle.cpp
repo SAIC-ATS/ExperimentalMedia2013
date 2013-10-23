@@ -21,7 +21,13 @@ void BaseTextParticle::draw()
     ofPushStyle();
 
     ofFill();
-    ofSetColor(255,190);
+
+    ofColor startColor = ofColor::white;
+    ofColor endColor = ofColor::yellow;
+
+    ofColor myColor = startColor.lerp(endColor, getLife());
+
+    ofSetColor(myColor);
 
     std::string::iterator iter = text.begin();
 

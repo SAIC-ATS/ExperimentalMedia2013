@@ -30,13 +30,55 @@ void BaseParticleGroup::draw()
     // this is a "group" drawing feature
     ofPushStyle();
     ofNoFill();
-    ofSetColor(color);
-    ofBeginShape();
+
+//    ofMesh mesh;
+//    mesh.setMode(OF_PRIMITIVE_TRIANGLES);
+
+    ofMesh trails;
+    trails.setMode(OF_PRIMITIVE_LINES);
+    trails.enableColors();
+
     for(std::size_t i = 0; i < members.size(); ++i)
     {
-        ofVertex(members[i]->position.x,members[i]->position.y);
+
+//        ofVec2f position = members[i]->position;
+//
+//        ofVec2f up = position + ofVec2f(0,-4);
+//        ofVec2f right = position + ofVec2f(4,4);
+//        ofVec2f left = position + ofVec2f(-4,4);
+//
+//
+//        mesh.addVertex(up);
+//        mesh.addVertex(right);
+//        mesh.addVertex(left);
+//
+//
+        ofFloatColor myColor = ofFloatColor::white;
+
+        ofFloatColor endColor(color);
+        endColor.a = 0;
+        myColor.lerp(color, members[i]->getLife());
+
+//        mesh.addColor(myColor);
+//        mesh.addColor(myColor);
+//        mesh.addColor(myColor);
+
+
+        trails.addVertex(members[i]->position);
+        trails.addColor(myColor);
+
+        ofVec2f diff = members[i]->position - members[i]->velocity;
+
+        trails.addVertex(diff);
+
+        ofFloatColor c = myColor;
+        c.a = 0;
+
+        trails.addColor(c);
     }
-    ofEndShape(true); // close it
+
+//    mesh.draw();
+    trails.draw();
 
     ofPopStyle();
 

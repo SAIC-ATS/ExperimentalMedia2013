@@ -18,6 +18,8 @@ public:
 
     virtual void kill();
 
+    float getLife() const;
+
     ofVec2f position;
     ofVec2f lastPosition;
     
@@ -31,5 +33,6 @@ public:
     bool isDead;
 
     std::shared_ptr<AbstractParticleSystem> particleSystem;
+
 
 };

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A30A356-8AC7-4574-974E-4AD87205F00D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UnicornSchmear</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3B34514A-1075-456B-8AF0-DAEFD698200B</key>
+		<string>ssh://github.com/bakercp/openFrameworks.git</string>
+		<key>DF4E302D-3AD5-4C3D-9434-4562FCDF0406</key>
+		<string>https://github.com/bakercp/ExperimentalMedia.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ExperimentalMedia/Week9/UnicornSchmear/UnicornSchmear.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3B34514A-1075-456B-8AF0-DAEFD698200B</key>
+		<string>../../../../..</string>
+		<key>DF4E302D-3AD5-4C3D-9434-4562FCDF0406</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bakercp/ExperimentalMedia.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3B34514A-1075-456B-8AF0-DAEFD698200B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF4E302D-3AD5-4C3D-9434-4562FCDF0406</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ExperimentalMedia</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3B34514A-1075-456B-8AF0-DAEFD698200B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>openFrameworks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

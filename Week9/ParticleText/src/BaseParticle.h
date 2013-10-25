@@ -4,6 +4,7 @@
 #include "ofVec3f.h"
 #include "ofGraphics.h"
 #include "of3dGraphics.h"
+#include "AbstractTypes.h"
 
 
 class BaseParticle
@@ -11,10 +12,13 @@ class BaseParticle
 public:
     BaseParticle();
     virtual ~BaseParticle();
-    //다른 쪽에 inherit 해줄거라는 것을 알려주는 표시에요 
 
     virtual void update();
     virtual void draw();
+
+    virtual void kill();
+
+    float getLife() const;
 
     ofVec2f position;
     ofVec2f lastPosition;
@@ -22,10 +26,13 @@ public:
     ofVec2f velocity;
     ofVec2f acceleration;
 
+    float heading;
+    
     int age;
     int maxAge;
     bool isDead;
 
-    int* myPointer;
+    std::shared_ptr<AbstractParticleSystem> particleSystem;
 
-}; // don't forget the semi-colon after your class definition
+
+};

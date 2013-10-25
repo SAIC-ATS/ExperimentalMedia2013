@@ -59,6 +59,12 @@ void ofApp::draw()
 void ofApp::newParticle()
 {
     // move to the next particle (remember what modulo does?)
+    if(words.empty())
+    {
+        ofLogError("ofApp::newParticle") << "Words were not loaded.  New particles cannot be created.";
+        return;
+    }
+
     currentWord = (currentWord + 1) % words.size();
 
     std::string nextWord = words[currentWord];

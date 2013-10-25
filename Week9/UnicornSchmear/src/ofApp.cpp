@@ -57,6 +57,11 @@ void ofApp::draw()
         float imageWidth = image.getWidth();
         float imageHeight = image.getHeight();
 
+#ifdef TARGET_OPENGLES
+        imageWidth = 1;
+        imageHeight = 1;
+#endif
+
         float currentTextureY = ofMap(i,0,polyline.size(),0,imageHeight);
 
         ofVec2f textureCoordinate0 = ofVec2f(0,currentTextureY);

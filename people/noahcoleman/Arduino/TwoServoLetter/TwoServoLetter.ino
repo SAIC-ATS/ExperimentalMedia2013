@@ -6,8 +6,9 @@ Servo myServo0;
 Servo myServo1; // create servo object to control a servo 
 
 
-int incomingStuff;     //  
-int val1 = 0;          //variable for the servo position
+char incomingStuff;     //  
+int val0 = 0;
+int val1 = 0;//variable for the servo position
 String mouseDataIn;
 String data[2];
 int counter;
@@ -35,12 +36,10 @@ void loop()
       counter = counter + 1;
     }
     if(incomingStuff == '\n'){
-      unsigned int length = mouseDataIn.length();
-      char storage[length];
-      mouseDataIn.toCharArray(storage, length);
-      val1 = atoi(storage);//atoi converts from char array to integ
+      data[counter] = String(mouseDataIn);
+      val1 = data[0].toInt();
 
-      //val1 = int(mouseDataIn);
+
       mouseDataIn = String("");
       counter = 0;
     }

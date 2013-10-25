@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-    mySerial.setup("/dev/tty.usbmodem3a21", 9600); //Need a serial port, please.
+    mySerial.setup("/dev/tty.usbmodemfd141", 9600); //Need a serial port, please. fd141 for home iMac. 3a21 for iMac in 416.
     
 
         
@@ -45,7 +45,8 @@ void testApp::draw(){
     int numBytesWritten = mySerial.writeBytes(cArray, outputBuffer.size());
 
 
-    cout <<mouseXy.x << endl;
+//    cout << << endl;
+//    cout <<mouseXy.x << endl;
 //    cout <<mouseXy.y << endl;
 
     

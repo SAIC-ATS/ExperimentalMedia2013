@@ -9,6 +9,11 @@ void ofApp::setup()
     drawVertexIndicies = false;
 
     image.loadImage("image.png");
+    alphaImage.loadImage("image_a.png");
+
+    maxPoints = 100;
+
+    useAlphaImage = false;
 }
 
 //------------------------------------------------------------------------------
@@ -40,7 +45,7 @@ void ofApp::draw()
             distance = currentPoint.distance(polyline[i-1]);
         }
 
-        float strokeWidth = ofMap(distance,0,100,50,100,true);
+        float strokeWidth = ofMap(distance,0,100,100,255,true);
         float alpha = ofMap(distance,0,100,200,255,true);
 
         mesh.addVertex(currentPoint + (normalPoint * strokeWidth));
@@ -51,13 +56,6 @@ void ofApp::draw()
 
         float imageWidth = image.getWidth();
         float imageHeight = image.getHeight();
-
-        float currentTextureX = 0;
-
-        if(0 == i % 2)
-        {
-            currentTextureX = imageWidth;
-        }
 
         float currentTextureY = ofMap(i,0,polyline.size(),0,imageHeight);
 
@@ -70,9 +68,25 @@ void ofApp::draw()
 
     }
 
-    image.bind();
+    if(useAlphaImage)
+    {
+        alphaImage.bind();
+    }
+    else
+    {
+        image.bind();
+    }
+
     mesh.draw();
-    image.unbind();
+
+    if(useAlphaImage)
+    {
+        alphaImage.unbind();
+    }
+    else
+    {
+        image.unbind();
+    }
 
 
     if(drawVertexIndicies)
@@ -86,7 +100,7 @@ void ofApp::draw()
         }
     }
 
-    ofDrawBitmapStringHighlight("Drag mouse.\n(c) to clear", 20,20);
+    ofDrawBitmapStringHighlight("Drag mouse.\n(c) to clear\n(space) fullscreen\n(a) alpha-corn", 20,20);
 }
 
 
@@ -101,6 +115,14 @@ void ofApp::keyPressed(int key)
     {
         drawVertexIndicies = !drawVertexIndicies;
     }
+    else if('a' == key)
+    {
+        useAlphaImage = !useAlphaImage;
+    }
+    else if(' ' == key)
+    {
+        ofToggleFullscreen();
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -108,6 +130,11 @@ void ofApp::mouseDragged(int x, int y, int button)
 {
     ofVec2f mouse(x,y);
     polyline.addVertex(mouse);
+
+    while(polyline.size() > maxPoints)
+    {
+        polyline.getVertices().erase(polyline.getVertices().begin()); // remove oldest
+    }
 }
 
 //------------------------------------------------------------------------------
@@ -115,5 +142,10 @@ void ofApp::mousePressed(int x, int y, int button)
 {
     ofVec2f mouse(x,y);
     polyline.addVertex(mouse);
+
+    while(polyline.size() > maxPoints)
+    {
+        polyline.getVertices().erase(polyline.getVertices().begin()); // remove oldest
+    }
 }
 

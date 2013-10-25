@@ -20,5 +20,10 @@ public:
 
     bool drawVertexIndicies;
 
+    std::size_t maxPoints;
+
+    bool useAlphaImage;
+
     ofImage image;
+    ofImage alphaImage;
 };

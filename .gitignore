@@ -18,3 +18,11 @@ example/obj
 # Win
 *.exe
 *.dll
+
+*.pdb
+*.ilk
+*.lib
+obj
+*.exp
+*.suo
+*.sdf

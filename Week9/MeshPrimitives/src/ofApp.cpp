@@ -41,9 +41,7 @@ void ofApp::draw()
     }
 
     // clear out my mesh
-//    mesh.clear();
-
-    ofMesh mesh;
+    mesh.clear();
 
     mesh.setMode(currentPrimitiveMode);
     mesh.enableColors();
@@ -54,14 +52,12 @@ void ofApp::draw()
 
         mesh.addVertex(currentPoint);
 
-        float map = ofMap(i, 0, polyline.size(), 255, 0); // calculate an alpha value
+        // ofFloatColor uses values of 0-1.
+        float map = ofMap(i, 0, polyline.size(), 1, 0); // calculate a value mapped to position
 
-        ofFloatColor color(255,map,0);
-
-//        cout << color << endl;
+        ofFloatColor color(255,map,0,map);
 
         mesh.addColor(color);
-
 
         if(drawVertexIndicies)
         {

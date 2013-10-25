@@ -6,9 +6,10 @@ void ofApp::setup()
 {
     ofSetFrameRate(60);
     ofEnableAlphaBlending();
+    ofEnableSmoothing();
 
     // we load our font with contours (see the docs for more info on the args)
-    font.loadFont("verdana.ttf", 40, true, true, true);
+    font.loadFont("verdana.ttf", 50, true, true, true);
 
     // we initialize a new particles system and wrap it in a shared pointer
     // so that we don't have to worry about calling `delete`.  Remember, if
@@ -58,6 +59,12 @@ void ofApp::draw()
 void ofApp::newParticle()
 {
     // move to the next particle (remember what modulo does?)
+    if(words.empty())
+    {
+        ofLogError("ofApp::newParticle") << "Words were not loaded.  New particles cannot be created.";
+        return;
+    }
+
     currentWord = (currentWord + 1) % words.size();
 
     std::string nextWord = words[currentWord];
@@ -67,9 +74,9 @@ void ofApp::newParticle()
 
     // set the particle up -- playing with these numbers makes a big difference!
     particle->position = ofVec2f(ofGetWidth()/2,ofGetHeight()/2);
-    particle->velocity = ofVec2f(ofRandom(-5,5),ofRandom(-8,2));
+    particle->velocity = ofVec2f(ofRandom(-5,5),ofRandom(-12,2));
     particle->acceleration = ofVec2f(0,.1);
-    particle->maxAge = ofRandom(10,30);
+    particle->maxAge = ofRandom(10,80);
 
     // make sure the particle knows about the particle system ...
     // because when the particle is killed, it will tell the particle
@@ -84,6 +91,7 @@ void ofApp::newParticle()
 void ofApp::keyPressed(int key)
 {
     newParticle();
+    ofToggleFullscreen();
 }
 
 //------------------------------------------------------------------------------

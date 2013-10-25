@@ -18,7 +18,15 @@ void LetterParticle::draw()
     ofPushStyle();
 
     ofNoFill();
-    ofSetColor(255);
+
+    ofColor startColor = ofColor::yellow;
+    ofColor endColor = ofColor::white;
+
+    ofColor myColor = startColor;
+
+    myColor.lerp(endColor, getLife());
+
+    ofSetColor(myColor);
 
     font.drawStringAsShapes(text,0,0);
 
@@ -43,12 +51,9 @@ void LetterParticle::kill()
 
         while(polyIter != polylines.end())
         {
-
-            int groupMaxAge = 500;
-
             if((*polyIter).size() > 0)
             {
-                ofPolyline resampled = (*polyIter).getResampledBySpacing(2);
+                ofPolyline resampled = (*polyIter).getResampledBySpacing(2); // this number tells us how many particles
 
                 if(resampled.size() > 0)
                 {
@@ -66,12 +71,12 @@ void LetterParticle::kill()
 
                         // this is how we get the particle to move away from the center
                         // of the group (as calculated by the centroid)
-                        ofVec2f newVelocity = (poly[i] - centroid).normalized() * ofRandom(.5,1);
+                        ofVec2f newVelocity = (poly[i] - centroid).normalized() * ofRandom(.5,2);
 
                         particle->position = position + poly[i];
                         particle->velocity = velocity + newVelocity;
                         particle->acceleration = acceleration;
-                        particle->maxAge = groupMaxAge;
+                        particle->maxAge = ofRandom(50,100);
 
                         particle->particleSystem = particleSystem; // make a link back to the particle system
                         

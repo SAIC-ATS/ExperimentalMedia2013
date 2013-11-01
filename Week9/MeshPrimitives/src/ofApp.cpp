@@ -29,8 +29,8 @@ void ofApp::update()
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
-    ofBackground(127);
-
+    ofBackgroundGradient(ofColor::white,ofColor::black);
+    
     std::string infoString = makeInfoString();
 
     ofDrawBitmapStringHighlight(infoString, 20, 20);
@@ -41,9 +41,7 @@ void ofApp::draw()
     }
 
     // clear out my mesh
-//    mesh.clear();
-
-    ofMesh mesh;
+    mesh.clear();
 
     mesh.setMode(currentPrimitiveMode);
     mesh.enableColors();
@@ -54,14 +52,12 @@ void ofApp::draw()
 
         mesh.addVertex(currentPoint);
 
-        float map = ofMap(i, 0, polyline.size(), 255, 0); // calculate an alpha value
+        // ofFloatColor uses values of 0-1.
+        float map = ofMap(i, 0, polyline.size(), 1, 0); // calculate a value mapped to position
 
-        ofFloatColor color(255,map,0);
-
-//        cout << color << endl;
+        ofFloatColor color(255,map,0,map);
 
         mesh.addColor(color);
-
 
         if(drawVertexIndicies)
         {
@@ -119,22 +115,20 @@ void ofApp::draw()
         ofPopStyle();
     }
 
-    mesh.draw();
+    if(drawMeshPoints)
+    {
+        mesh.draw(OF_MESH_POINTS);
+    }
 
-//    if(drawMeshPoints)
-//    {
-//        mesh.draw(OF_MESH_POINTS);
-//    }
-//
-//    if(drawMeshFill)
-//    {
-//        mesh.draw(OF_MESH_FILL);
-//    }
-//
-//    if(drawMeshWireframe)
-//    {
-//        mesh.draw(OF_MESH_WIREFRAME);
-//    }
+    if(drawMeshFill)
+    {
+        mesh.draw(OF_MESH_FILL);
+    }
+
+    if(drawMeshWireframe)
+    {
+        mesh.draw(OF_MESH_WIREFRAME);
+    }
 
 }
 

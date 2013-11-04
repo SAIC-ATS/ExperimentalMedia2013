@@ -29,8 +29,8 @@ void ofApp::update()
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
-    ofBackground(127);
-
+    ofBackgroundGradient(ofColor::white,ofColor::black);
+    
     std::string infoString = makeInfoString();
 
     ofDrawBitmapStringHighlight(infoString, 20, 20);
@@ -115,22 +115,20 @@ void ofApp::draw()
         ofPopStyle();
     }
 
-    mesh.draw();
+    if(drawMeshPoints)
+    {
+        mesh.draw(OF_MESH_POINTS);
+    }
 
-//    if(drawMeshPoints)
-//    {
-//        mesh.draw(OF_MESH_POINTS);
-//    }
-//
-//    if(drawMeshFill)
-//    {
-//        mesh.draw(OF_MESH_FILL);
-//    }
-//
-//    if(drawMeshWireframe)
-//    {
-//        mesh.draw(OF_MESH_WIREFRAME);
-//    }
+    if(drawMeshFill)
+    {
+        mesh.draw(OF_MESH_FILL);
+    }
+
+    if(drawMeshWireframe)
+    {
+        mesh.draw(OF_MESH_WIREFRAME);
+    }
 
 }
 

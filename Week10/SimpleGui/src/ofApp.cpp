@@ -16,7 +16,7 @@ void ofApp::setup()
                               ofRandom(10,100)); // height
 
         BaseHandle::SharedPtr box = BaseHandle::SharedPtr(new BaseHandle(rectangle));
-        
+
         boxes.push_back(box);
     }
 }
@@ -61,7 +61,7 @@ void ofApp::mouseDragged(int x, int y, int button)
 //------------------------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button)
 {
-    ofVec2f mouse(ofGetMouseX(),ofGetMouseY());
+    ofVec2f mouse(x,y);
 
     for(std::size_t i = 0; i < boxes.size(); ++i)
     {

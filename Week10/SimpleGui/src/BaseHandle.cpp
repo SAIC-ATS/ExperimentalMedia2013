@@ -41,13 +41,13 @@ void BaseHandle::draw()
         {
             ofSetColor(colorOver);
         }
-
     }
     else
     {
         ofSetColor(color);
     }
 
+    BaseHandle* pToThis = this;
 
     // fill
     ofFill();

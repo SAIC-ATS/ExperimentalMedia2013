@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>674A452B-FB97-488E-9702-CA9C40544DF2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ofApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
+		<string>ssh://github.com/bakercp/openFrameworks.git</string>
+		<key>F96A490E-6B16-447F-BBF3-79FD7223F37C</key>
+		<string>ssh://github.com/bakercp/ofxCv.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>addons/ofxCv/example-background/ofApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>45B414AD-06FD-4497-9C7A-E1A33FADFECF</key>
+		<string>../../../../..</string>
+		<key>F96A490E-6B16-447F-BBF3-79FD7223F37C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/bakercp/ofxCv.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>45B414AD-06FD-4497-9C7A-E1A33FADFECF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F96A490E-6B16-447F-BBF3-79FD7223F37C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxCv</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>45B414AD-06FD-4497-9C7A-E1A33FADFECF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>openFrameworks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

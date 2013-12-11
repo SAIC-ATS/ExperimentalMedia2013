@@ -1,4 +1,4 @@
-# Sending data to the Arduino
+# Sending data from oF to Arduino
 
 This tutorial illustrates how you can send data from an openFrameworks application to the Arduino via a USB port, using **ofSerial**. This way you can use any data input (mouse, keyboard, a database, the internet) and control Arduino output (servo motors, LEDs, etc.).
 
@@ -10,7 +10,7 @@ The Arduino then receives one byte after each other and puts them in a buffer. A
 
 ### Steps
 
-**in openFrameworks**
+*in openFrameworks*
 
 
 1. **Setup** serial communication
@@ -19,15 +19,10 @@ The Arduino then receives one byte after each other and puts them in a buffer. A
 4. **Send signifier** to distinguish each updating cycle
 
 
-**in Arduino**
+*in Arduino*
 
 1. **Setup** serial communication
 2. **Receive data** and put it into an array
-
-nu
-mbers until the end-of-byte sign is received.
-3. Cast those numbers into an `unsigned byte`.
-4. Do something with the received data.
 
 ***
 
@@ -64,10 +59,9 @@ In addition, we limit the **frame rate** of the oF application's update cycle to
 *ofApp.cpp*
 	
 	void testApp::setup()
-	{	// setting the frame rate to 30fps
-		ofSetFrameRate(30);
-		// initializing the serial port and baud rate
-        serial.setup("/dev/tty.usbmodem411",9600);
+	{			
+		ofSetFrameRate(30);							// setting frame rate to 30fps
+        serial.setup("/dev/tty.usbmodem411",9600);	// initializing port and baud rate
    	}
 
 ### 2. Define data
@@ -97,14 +91,14 @@ Still in the `update()` function of our **.cpp** file, we now take the byte-size
 
 ### 4. Send signifier
 
-We are sending the data of the mouse positions in numbers ranging 0-254 in two bytes. This means we can use the last number of a byte, 255, as a signal to the Arduino that both coordinates have been sent.
+We are sending the data of the mouse positions in numbers ranging 0-254 in two bytes. This means we can send a third byte with the number 255, as a signal to the Arduino that both coordinates have been sent.
 
 *ofApp.cpp* in the `update()` function:
 
 	serial.writeByte(255);
 
 ### Run the program
-Run the program. It will now with a frame rate of 30fps send the position of the mouse in the program's window via USB serial connection to the Arduino. Now let's make sure someone is listening at the other end.
+Run the program. It will now send the position of the mouse in the program's window with a frame rate of 30fps via USB serial connection to the Arduino. Now let's make sure someone is listening at the other end.
 
 ***
 
@@ -119,10 +113,11 @@ On the Arduino side, we need to define a few variables to start with:
 	// The signifier-byte that marks the end of an updating cycle
 	const byte PACKET_BOUNDARY_BYTE = 255; 
 
-	// The amount of bytes we are expecting from the oF application (X and Y positions)
+	// The amount of bytes we are expecting from the oF application 
+	// (X and Y positions in this case)
 	const int NUM_BYTES_EXPECTED = 2;
 	
-Next we need a buffer array that can store the received data for each cycle. Once this is filled, the data can be sent on. We also need a variable that tells us where in the array we are currently writing data (a cursor, if you will). We'll call it `bufferIndex`. Finally, an array called `dataValues[]` where we can send the data from our buffer, when it is received.
+Next we need a buffer array that can store the received data for each cycle. Once this is filled, the data can be sent on. We also need a variable that tells us where in the array we are currently writing data (a cursor, if you will). We'll call it `bufferIndex`. Finally, an array called `dataValues[]` where we can send the data from our buffer when it is received.
 
 *Arduino IDE*
 
@@ -130,7 +125,7 @@ Next we need a buffer array that can store the received data for each cycle. Onc
 	byte bufferIndex = 0;
 	byte dataValues[NUM_BYTES_EXPECTED] = { 0, 0 };
 
-In our `setup(){}` we need to initialize our serial communication with the same baud rate, `9600` that we sent in our openFrameworks application.
+In our `setup()` we need to initialize our serial communication with the same baud rate (`9600`) that we sent in our openFrameworks application.
 
 *Arduino IDE*
 
@@ -141,7 +136,7 @@ In our `setup(){}` we need to initialize our serial communication with the same 
 
 ### 2. Receive data
 
-In the `loop(){}` we are then checking for the incoming data with a series of convoluted `while` and `if`-loops. When we successfully received the data and placed it inside our array, we can then access and use it (as well in our `loop()`-function).
+In the `loop()` we are then checking for the incoming data with a series of convoluted `while`- and `if`-loops. When we have successfully received the data and placed it inside our array, we can then access and use it (also in our `loop()`-function).
 
 *Receiving data scheme:*
 <img src="data/dataReceiveScheme.png" alt="Drawing" style="width: 800px;"/>
@@ -154,7 +149,7 @@ In the `loop(){}` we are then checking for the incoming data with a series of co
   		{    		
     		byte inByte = Serial.read();							// Step 2
     	
-    		if(inByte == 255)										// Step 3
+    		if(inByte == PACKET_BOUNDARY_BYTE)						// Step 3
     		{    			
       			if(bufferIndex == NUM_BYTES_EXPECTED)				// Step 4
       			{

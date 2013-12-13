@@ -33,5 +33,7 @@ public:
     bool drawPolyCurves;
 
     bool drawVertexIndicies;
+    
+     ofTrueTypeFont font;
 
 };

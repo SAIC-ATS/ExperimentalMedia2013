@@ -23,7 +23,7 @@ byte bufferIndex = 0;
 //----------------
 
 const int NUM_LED_PINS = NUM_BYTES_EXPECTED; // we expect one byte for each LED
-const byte LED_PINS[NUM_LED_PINS] = { 5, 6 };
+const byte LED_PINS[NUM_LED_PINS] = {10,11 };
 byte ledValues[NUM_LED_PINS] = { 0, 0 };
 
 void setup()

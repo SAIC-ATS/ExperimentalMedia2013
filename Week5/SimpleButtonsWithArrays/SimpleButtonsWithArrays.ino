@@ -1,5 +1,5 @@
 const int numButtons = 3;
-int ledPins[numButtons] = { 9, 10, 11 };
+int ledPins[numButtons] = { 10,11,12 };
 int buttonPins[numButtons] = { 2, 3, 4 };
 
 int lastButtonState[numButtons] = { LOW, LOW, LOW };

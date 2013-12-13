@@ -29,8 +29,11 @@ void ofApp::update()
 //------------------------------------------------------------------------------
 void ofApp::draw()
 {
+
+
     ofBackgroundGradient(ofColor::white,ofColor::black);
     
+
     std::string infoString = makeInfoString();
 
     ofDrawBitmapStringHighlight(infoString, 20, 20);
@@ -41,7 +44,13 @@ void ofApp::draw()
     }
 
     // clear out my mesh
+
+
+
+
+
     mesh.clear();
+
 
     mesh.setMode(currentPrimitiveMode);
     mesh.enableColors();
@@ -52,12 +61,14 @@ void ofApp::draw()
 
         mesh.addVertex(currentPoint);
 
+
         // ofFloatColor uses values of 0-1.
         float map = ofMap(i, 0, polyline.size(), 1, 0); // calculate a value mapped to position
 
         ofFloatColor color(255,map,0,map);
 
         mesh.addColor(color);
+
 
         if(drawVertexIndicies)
         {
@@ -114,6 +125,7 @@ void ofApp::draw()
         ofEndShape();
         ofPopStyle();
     }
+
 
     if(drawMeshPoints)
     {

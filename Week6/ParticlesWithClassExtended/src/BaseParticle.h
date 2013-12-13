@@ -11,6 +11,7 @@ class BaseParticle
 public:
     BaseParticle();
     virtual ~BaseParticle();
+    //다른 쪽에 inherit 해줄거라는 것을 알려주는 표시에요 
 
     virtual void update();
     virtual void draw();

@@ -66,10 +66,8 @@ void testApp::update(){
         theGUI->searchLibrary = false;
         // we should only call the search method after we verify
         // that there is something to search for
-        cout << "typeStr HERE is " << theGUI->typeStr << endl;
         if (theGUI->typeStr != "")
         {
-            cout << "searchLibrary called in testApp::update" << endl;
             searchLibrary(theGUI->typeStr, theGUI->searchArtists, theGUI->searchAlbums, theGUI->searchTracks);
         }
     }
@@ -275,7 +273,6 @@ void testApp::searchLibrary(string searchTerms, bool artist, bool album, bool tr
     // whole words only
     string searchTermsPrepped;
     searchTermsPrepped = "\\b" + searchTerms + "\\b";
-    cout << "searchTermsPrepped is " << searchTermsPrepped << endl;
     RegularExpression RegEx_searchTerms(searchTermsPrepped, RegularExpression::RE_CASELESS);
     RegularExpression::Match mtch;
     

@@ -324,8 +324,6 @@ void GUI::pagedResults(){
     {
         numResultsToDraw = numResults - startingResult;
     }
-    cout << "startingResult is " << startingResult << endl;
-
     
     //We can do this by taking advantage of ofXml's array-like syntax
     string pathToStartingResult = "//RESULTS/RESULT[" + ofToString(startingResult) + "]";

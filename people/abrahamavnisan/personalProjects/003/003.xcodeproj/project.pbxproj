@@ -1,0 +1,844 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27D2B9D0A2AA385576903C22 /* ofxBulletCustomShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 944741979580CC1523D9091F /* ofxBulletCustomShape.cpp */; };
+		2C1ED88A3466D1D2AC3DA004 /* ofxCameraSaveLoad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEB2058E7166D8CDCFAD557B /* ofxCameraSaveLoad.cpp */; };
+		4A1476D56D01EE9A7F8DC778 /* ofxBulletCylinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50876ECF1B6C57E1689C1471 /* ofxBulletCylinder.cpp */; };
+		4D06C9AB19F309C053E6E14A /* ofxBulletSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEB5D787A355E769B955A /* ofxBulletSphere.cpp */; };
+		5241CC211D1318DE2DC0D83B /* ofxBulletBaseShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8857229326840F602932BB80 /* ofxBulletBaseShape.cpp */; };
+		7FE73FEF709456B39C5ABAFD /* ofxBulletConvexShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6899DC7F52724319A35FBB7 /* ofxBulletConvexShape.cpp */; };
+		9F7797B0AD4ADAC8D847A2EB /* ofxBulletCone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F241E982C907F9E2079B795 /* ofxBulletCone.cpp */; };
+		AE83F0CEA2C8D83D72618074 /* ofxBulletWorldRigid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39157C47D15F25CBEF1E29D3 /* ofxBulletWorldRigid.cpp */; };
+		B8E8938FC5AB7FE23FDC9F9A /* ofxBulletCapsule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24423382B2B9074E89180975 /* ofxBulletCapsule.cpp */; };
+		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		C0405AAE75709CB731DB2A1F /* ofxBulletBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D10096C7BEFA0B5510A0A7CC /* ofxBulletBox.cpp */; };
+		D82740B1C3CA5499786DDB9F /* ofxBulletJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6C5464F0CBE637BF2A6C0 /* ofxBulletJoint.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
+		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
+		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
+		E45BE97E0E8CC7DD009D7055 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9740E8CC7DD009D7055 /* Carbon.framework */; };
+		E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */; };
+		E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */; };
+		E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
+		E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
+		E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */; };
+		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
+		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
+		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
+		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
+		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
+		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		F339BE01E26C23969AD466D8 /* ofxBulletStaticPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ECBD8087785BF3C6F9CE077 /* ofxBulletStaticPlane.cpp */; };
+		F393FD743E5B44AFF9917168 /* GLDebugDrawer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA65999612BA629FFBBD9 /* GLDebugDrawer.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CB6C5464F0CBE637BF2A6C0 /* ofxBulletJoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletJoint.cpp; path = ../../../addons/ofxBullet/src/joints/ofxBulletJoint.cpp; sourceTree = SOURCE_ROOT; };
+		0DFDEB5D787A355E769B955A /* ofxBulletSphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletSphere.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletSphere.cpp; sourceTree = SOURCE_ROOT; };
+		0F241E982C907F9E2079B795 /* ofxBulletCone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletCone.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCone.cpp; sourceTree = SOURCE_ROOT; };
+		11CBEAD1DF69FEDE5C7812B6 /* ofxBulletWorldRigid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletWorldRigid.h; path = ../../../addons/ofxBullet/src/ofxBulletWorldRigid.h; sourceTree = SOURCE_ROOT; };
+		157779B937A408DB628408FA /* ofxBulletMousePickEvent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletMousePickEvent.h; path = ../../../addons/ofxBullet/src/events/ofxBulletMousePickEvent.h; sourceTree = SOURCE_ROOT; };
+		1712C2F3FC7767B5CABE416B /* ofxBulletUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletUtils.h; path = ../../../addons/ofxBullet/src/ofxBulletUtils.h; sourceTree = SOURCE_ROOT; };
+		24423382B2B9074E89180975 /* ofxBulletCapsule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletCapsule.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCapsule.cpp; sourceTree = SOURCE_ROOT; };
+		2F15021BA78A2247D05FE377 /* ofxBulletCylinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletCylinder.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCylinder.h; sourceTree = SOURCE_ROOT; };
+		370BF760B1360277E9995F0D /* GLDebugDrawer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GLDebugDrawer.h; path = ../../../addons/ofxBullet/src/render/GLDebugDrawer.h; sourceTree = SOURCE_ROOT; };
+		39157C47D15F25CBEF1E29D3 /* ofxBulletWorldRigid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletWorldRigid.cpp; path = ../../../addons/ofxBullet/src/ofxBulletWorldRigid.cpp; sourceTree = SOURCE_ROOT; };
+		3977B2DB0B6C5914A4AC8DBD /* ofxBulletUserData.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletUserData.h; path = ../../../addons/ofxBullet/src/ofxBulletUserData.h; sourceTree = SOURCE_ROOT; };
+		46E07CC7ABC90048BEC11541 /* ofxBulletCollisionData.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletCollisionData.h; path = ../../../addons/ofxBullet/src/events/ofxBulletCollisionData.h; sourceTree = SOURCE_ROOT; };
+		50876ECF1B6C57E1689C1471 /* ofxBulletCylinder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletCylinder.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCylinder.cpp; sourceTree = SOURCE_ROOT; };
+		50B792A8173E95A789AC7896 /* ofxBulletStaticPlane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletStaticPlane.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletStaticPlane.h; sourceTree = SOURCE_ROOT; };
+		5344B07223BF3DD01BA3CEF4 /* ofxBulletBaseShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletBaseShape.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletBaseShape.h; sourceTree = SOURCE_ROOT; };
+		55256E19D497DECF005012D5 /* ofxBulletCapsule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletCapsule.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCapsule.h; sourceTree = SOURCE_ROOT; };
+		6D5588D3FAE44B8D0798BA44 /* ofxCameraSaveLoad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCameraSaveLoad.h; path = ../../../addons/ofxCameraSaveLoad/src/ofxCameraSaveLoad.h; sourceTree = SOURCE_ROOT; };
+		6ECBD8087785BF3C6F9CE077 /* ofxBulletStaticPlane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletStaticPlane.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletStaticPlane.cpp; sourceTree = SOURCE_ROOT; };
+		807CA6E9E1B111A6D343D3A0 /* ofxBulletCustomShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletCustomShape.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCustomShape.h; sourceTree = SOURCE_ROOT; };
+		8828868C0BD400052780163A /* ofxBullet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBullet.h; path = ../../../addons/ofxBullet/src/ofxBullet.h; sourceTree = SOURCE_ROOT; };
+		8857229326840F602932BB80 /* ofxBulletBaseShape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletBaseShape.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletBaseShape.cpp; sourceTree = SOURCE_ROOT; };
+		8948367193E123EBE2ABE5C3 /* ofxBulletConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletConstants.h; path = ../../../addons/ofxBullet/src/ofxBulletConstants.h; sourceTree = SOURCE_ROOT; };
+		9360B6EAA049AC8F85D180AE /* ofxBulletBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletBox.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletBox.h; sourceTree = SOURCE_ROOT; };
+		93ADA65999612BA629FFBBD9 /* GLDebugDrawer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GLDebugDrawer.cpp; path = ../../../addons/ofxBullet/src/render/GLDebugDrawer.cpp; sourceTree = SOURCE_ROOT; };
+		944741979580CC1523D9091F /* ofxBulletCustomShape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletCustomShape.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCustomShape.cpp; sourceTree = SOURCE_ROOT; };
+		957ECE231D031DA41CE4D1A0 /* ofxBulletConvexShape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletConvexShape.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletConvexShape.h; sourceTree = SOURCE_ROOT; };
+		BACD507A0CB2B9E0736104D0 /* ofxBulletCone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletCone.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletCone.h; sourceTree = SOURCE_ROOT; };
+		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		CDB26DD10CB18BD0DB80F09A /* ofxBulletRaycastData.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletRaycastData.h; path = ../../../addons/ofxBullet/src/events/ofxBulletRaycastData.h; sourceTree = SOURCE_ROOT; };
+		CEE7253A7C214DE53BBE1F72 /* ofxBulletJoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletJoint.h; path = ../../../addons/ofxBullet/src/joints/ofxBulletJoint.h; sourceTree = SOURCE_ROOT; };
+		D09DC8DF43BB7EABD629FD9D /* ofxBulletSphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBulletSphere.h; path = ../../../addons/ofxBullet/src/shapes/ofxBulletSphere.h; sourceTree = SOURCE_ROOT; };
+		D10096C7BEFA0B5510A0A7CC /* ofxBulletBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletBox.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletBox.cpp; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		E45BE9740E8CC7DD009D7055 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
+		E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		E4B69B5B0A3A1756003C02F2 /* 003Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 003Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		E4C2424510CC5A17004149E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F6899DC7F52724319A35FBB7 /* ofxBulletConvexShape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBulletConvexShape.cpp; path = ../../../addons/ofxBullet/src/shapes/ofxBulletConvexShape.cpp; sourceTree = SOURCE_ROOT; };
+		FEB2058E7166D8CDCFAD557B /* ofxCameraSaveLoad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxCameraSaveLoad.cpp; path = ../../../addons/ofxCameraSaveLoad/src/ofxCameraSaveLoad.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
+				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
+				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
+				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
+				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
+				E45BE97E0E8CC7DD009D7055 /* Carbon.framework in Frameworks */,
+				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
+				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
+				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
+				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
+				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
+				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
+				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
+				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
+				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E4AEAC4C4B878FA6E221313 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				56F5CC6E74F04FF5A520CEDA /* events */,
+				B0BE0E673D0BDD8973AE1AC5 /* joints */,
+				8828868C0BD400052780163A /* ofxBullet.h */,
+				8948367193E123EBE2ABE5C3 /* ofxBulletConstants.h */,
+				3977B2DB0B6C5914A4AC8DBD /* ofxBulletUserData.h */,
+				1712C2F3FC7767B5CABE416B /* ofxBulletUtils.h */,
+				39157C47D15F25CBEF1E29D3 /* ofxBulletWorldRigid.cpp */,
+				11CBEAD1DF69FEDE5C7812B6 /* ofxBulletWorldRigid.h */,
+				C3DC00C4E6825E81A55EE163 /* render */,
+				47CC683F888777B4F96BDF49 /* shapes */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		47CC683F888777B4F96BDF49 /* shapes */ = {
+			isa = PBXGroup;
+			children = (
+				8857229326840F602932BB80 /* ofxBulletBaseShape.cpp */,
+				5344B07223BF3DD01BA3CEF4 /* ofxBulletBaseShape.h */,
+				D10096C7BEFA0B5510A0A7CC /* ofxBulletBox.cpp */,
+				9360B6EAA049AC8F85D180AE /* ofxBulletBox.h */,
+				24423382B2B9074E89180975 /* ofxBulletCapsule.cpp */,
+				55256E19D497DECF005012D5 /* ofxBulletCapsule.h */,
+				0F241E982C907F9E2079B795 /* ofxBulletCone.cpp */,
+				BACD507A0CB2B9E0736104D0 /* ofxBulletCone.h */,
+				F6899DC7F52724319A35FBB7 /* ofxBulletConvexShape.cpp */,
+				957ECE231D031DA41CE4D1A0 /* ofxBulletConvexShape.h */,
+				944741979580CC1523D9091F /* ofxBulletCustomShape.cpp */,
+				807CA6E9E1B111A6D343D3A0 /* ofxBulletCustomShape.h */,
+				50876ECF1B6C57E1689C1471 /* ofxBulletCylinder.cpp */,
+				2F15021BA78A2247D05FE377 /* ofxBulletCylinder.h */,
+				0DFDEB5D787A355E769B955A /* ofxBulletSphere.cpp */,
+				D09DC8DF43BB7EABD629FD9D /* ofxBulletSphere.h */,
+				6ECBD8087785BF3C6F9CE077 /* ofxBulletStaticPlane.cpp */,
+				50B792A8173E95A789AC7896 /* ofxBulletStaticPlane.h */,
+			);
+			name = shapes;
+			sourceTree = "<group>";
+		};
+		56F5CC6E74F04FF5A520CEDA /* events */ = {
+			isa = PBXGroup;
+			children = (
+				46E07CC7ABC90048BEC11541 /* ofxBulletCollisionData.h */,
+				157779B937A408DB628408FA /* ofxBulletMousePickEvent.h */,
+				CDB26DD10CB18BD0DB80F09A /* ofxBulletRaycastData.h */,
+			);
+			name = events;
+			sourceTree = "<group>";
+		};
+		B0BE0E673D0BDD8973AE1AC5 /* joints */ = {
+			isa = PBXGroup;
+			children = (
+				0CB6C5464F0CBE637BF2A6C0 /* ofxBulletJoint.cpp */,
+				CEE7253A7C214DE53BBE1F72 /* ofxBulletJoint.h */,
+			);
+			name = joints;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				CDA47165D96F2059C5206BBD /* ofxBullet */,
+				CD15E07442C69BE602D98FD7 /* ofxCameraSaveLoad */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7F985F515E0DE99003869B5 /* Accelerate.framework */,
+				E4C2424410CC5A17004149E2 /* AppKit.framework */,
+				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
+				E4C2424610CC5A17004149E2 /* IOKit.framework */,
+				E45BE9710E8CC7DD009D7055 /* AGL.framework */,
+				E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */,
+				E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */,
+				E45BE9740E8CC7DD009D7055 /* Carbon.framework */,
+				E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */,
+				E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */,
+				E45BE9770E8CC7DD009D7055 /* CoreServices.framework */,
+				E45BE9790E8CC7DD009D7055 /* OpenGL.framework */,
+				E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */,
+				E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */,
+				E7E077E715D3B6510020DFD4 /* QTKit.framework */,
+			);
+			name = "system frameworks";
+			sourceTree = "<group>";
+		};
+		BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
+			);
+			name = "3rd party frameworks";
+			sourceTree = "<group>";
+		};
+		C3DC00C4E6825E81A55EE163 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA65999612BA629FFBBD9 /* GLDebugDrawer.cpp */,
+				370BF760B1360277E9995F0D /* GLDebugDrawer.h */,
+			);
+			name = render;
+			sourceTree = "<group>";
+		};
+		CD15E07442C69BE602D98FD7 /* ofxCameraSaveLoad */ = {
+			isa = PBXGroup;
+			children = (
+				DD4B7A6B02FE3A9E6EA4776D /* src */,
+			);
+			name = ofxCameraSaveLoad;
+			sourceTree = "<group>";
+		};
+		CDA47165D96F2059C5206BBD /* ofxBullet */ = {
+			isa = PBXGroup;
+			children = (
+				0E4AEAC4C4B878FA6E221313 /* src */,
+			);
+			name = ofxBullet;
+			sourceTree = "<group>";
+		};
+		DD4B7A6B02FE3A9E6EA4776D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FEB2058E7166D8CDCFAD557B /* ofxCameraSaveLoad.cpp */,
+				6D5588D3FAE44B8D0798BA44 /* ofxCameraSaveLoad.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E45BE5980E8CC70C009D7055 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBAB23CA13894EDB00AA2426 /* 3rd party frameworks */,
+				BBAB23C913894ECA00AA2426 /* system frameworks */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E45BE5980E8CC70C009D7055 /* frameworks */,
+				E4B69B5B0A3A1756003C02F2 /* 003Debug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* 003 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "003" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = 003;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* 003Debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "003" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* 003 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
+				D82740B1C3CA5499786DDB9F /* ofxBulletJoint.cpp in Sources */,
+				AE83F0CEA2C8D83D72618074 /* ofxBulletWorldRigid.cpp in Sources */,
+				F393FD743E5B44AFF9917168 /* GLDebugDrawer.cpp in Sources */,
+				5241CC211D1318DE2DC0D83B /* ofxBulletBaseShape.cpp in Sources */,
+				C0405AAE75709CB731DB2A1F /* ofxBulletBox.cpp in Sources */,
+				B8E8938FC5AB7FE23FDC9F9A /* ofxBulletCapsule.cpp in Sources */,
+				9F7797B0AD4ADAC8D847A2EB /* ofxBulletCone.cpp in Sources */,
+				7FE73FEF709456B39C5ABAFD /* ofxBulletConvexShape.cpp in Sources */,
+				27D2B9D0A2AA385576903C22 /* ofxBulletCustomShape.cpp in Sources */,
+				4A1476D56D01EE9A7F8DC778 /* ofxBulletCylinder.cpp in Sources */,
+				4D06C9AB19F309C053E6E14A /* ofxBulletSphere.cpp in Sources */,
+				F339BE01E26C23969AD466D8 /* ofxBulletStaticPlane.cpp in Sources */,
+				2C1ED88A3466D1D2AC3DA004 /* ofxCameraSaveLoad.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxBullet/libs,
+					../../../addons/ofxBullet/libs/bullet2.8.1,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/BroadphaseCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/CollisionDispatch,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/CollisionShapes,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/Gimpact,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/NarrowPhaseCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Character,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/ConstraintSolver,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Dynamics,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Vehicle,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/DX11,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/DX11/HLSL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/AMD,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/Apple,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/Intel,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/MiniCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/NVidia,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC10,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/Shared,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/SpuNarrowPhaseCollisionTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/SpuSampleTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletSoftBody,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/LinearMath,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/MiniCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/MiniCL/MiniCLTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/neon,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/scalar,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/sse,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64,
+					../../../addons/ofxBullet/src,
+					../../../addons/ofxBullet/src/events,
+					../../../addons/ofxBullet/src/joints,
+					../../../addons/ofxBullet/src/render,
+					../../../addons/ofxBullet/src/shapes,
+					../../../addons/ofxCameraSaveLoad/libs,
+					../../../addons/ofxCameraSaveLoad/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletCollision.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletDynamics.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletSoftBody.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libLinearMath.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libMiniCL.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletCollision.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletDynamics.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletSoftBody.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libLinearMath.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libMiniCL.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxBullet/libs,
+					../../../addons/ofxBullet/libs/bullet2.8.1,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/BroadphaseCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/CollisionDispatch,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/CollisionShapes,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/Gimpact,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletCollision/NarrowPhaseCollision,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Character,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/ConstraintSolver,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Dynamics,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletDynamics/Vehicle,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/DX11,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/DX11/HLSL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/AMD,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/Apple,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/Intel,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/MiniCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/NVidia,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/OpenCL/OpenCLC10,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/GpuSoftBodySolvers/Shared,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/SpuNarrowPhaseCollisionTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletMultiThreaded/SpuSampleTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/BulletSoftBody,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/LinearMath,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/MiniCL,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/MiniCL/MiniCLTask,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/neon,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/scalar,
+					../../../addons/ofxBullet/libs/bullet2.8.1/include/vectormath/sse,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64,
+					../../../addons/ofxBullet/src,
+					../../../addons/ofxBullet/src/events,
+					../../../addons/ofxBullet/src/joints,
+					../../../addons/ofxBullet/src/render,
+					../../../addons/ofxBullet/src/shapes,
+					../../../addons/ofxCameraSaveLoad/libs,
+					../../../addons/ofxCameraSaveLoad/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-lpthread",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletCollision.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletDynamics.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libBulletSoftBody.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libLinearMath.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/i386/libMiniCL.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletCollision.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletDynamics.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libBulletSoftBody.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libLinearMath.a,
+					../../../addons/ofxBullet/libs/bullet2.8.1/lib/osx/x86_64/libMiniCL.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "003" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "003" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}

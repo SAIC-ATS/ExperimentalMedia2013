@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>43212CF3-4961-48B3-86A4-E9AE6EDC8D32</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ofxCsv</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>817C9ED7-F6AF-4352-8785-79EBA83BFADB</key>
+		<string>https://github.com/abrahamavnisan/ExperimentalMedia.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>people/abrahamavnisan/personalProjects/SpreadsheetToMarkdown/ofxCsv.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>817C9ED7-F6AF-4352-8785-79EBA83BFADB</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/abrahamavnisan/ExperimentalMedia.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>817C9ED7-F6AF-4352-8785-79EBA83BFADB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>817C9ED7-F6AF-4352-8785-79EBA83BFADB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ExperimentalMedia</string>
+		</dict>
+	</array>
+</dict>
+</plist>

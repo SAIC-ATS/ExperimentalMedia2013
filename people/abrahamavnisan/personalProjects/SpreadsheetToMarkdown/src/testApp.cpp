@@ -7,7 +7,7 @@ using Poco::RegularExpression;
 void testApp::setup(){
     
 	// Load a CSV File.
-	csv.loadFile(ofToDataPath("apps4.csv"));
+	csv.loadFile(ofToDataPath("us-500.csv"));
     
     string out = "";
     
